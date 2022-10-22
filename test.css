@@ -1,0 +1,165 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: black;
+}
+#main {
+    width:100vw;
+    height:100vh;
+    background-color: aqua;
+}
+#flex{
+    width:100vw;
+    height:100vh;
+    position: relative;
+    display: flex;
+}
+.image {
+    height:100vh;
+    position: relative;
+    transition: 400ms ease;
+    overflow: hidden;
+    flex-grow:2;
+    background-size:50vw auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    width:33.33vw;
+    background-blend-mode: darken;
+}
+.first {
+    background-image: url(images/germania.jpg);
+}
+.second {
+    background-image: url(images/romania.webp);
+}
+.third {
+    background-image: url(images/franta.jpg);
+}
+.first:hover, .second:hover, .third:hover {
+    flex-grow: 3;
+}
+#flex:hover .image {
+    background-blend-mode: darken;
+    width:0;
+    filter: blur(3px);
+}
+#flex .image:hover {
+    opacity: 0.9;
+    filter: blur(0);
+
+}
+.nume {
+    background-color: #505050;
+    position: relative;
+    top:20px;
+    left:50%;
+    translate:-50%;
+    color:white;
+    width:150px;
+    height:30px;
+    text-align: center;
+    font-size:20px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: 400ms;
+    transform: translateY(-10px);
+}
+.first:hover #germania-nume, .second:hover #romania-nume, .third:hover #franta-nume{
+    opacity:1;
+    transition-delay: 400ms;
+    transform: translateY(0);
+}
+#germania-flex, #romania-flex, #franta-flex {
+    width:100%;
+    height:100px;
+    position: absolute;
+    top:50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.steag {
+    width:80px;
+    height:50px;
+    background-position: center;
+    background-size: 80px 60px;
+    background-repeat: no-repeat;
+    transform:translateY(-10px);
+    opacity: 0;
+    transition: 400ms ease;
+}
+.steag:nth-child(1) {
+    background-image: url(steag/germania.png);
+}
+.steag:nth-child(2) {
+    background-image: url(steag/austro-ungaria.png);
+}
+.steag:nth-child(3){
+    background-image: url(steag/italia.png);
+}
+.first:hover .steag-ger{
+    transform: translateY(0px);
+    opacity:1;
+}
+.first:hover .steag:nth-child(1) {
+    transition-delay: 500ms;
+}
+.first:hover .steag:nth-child(2) {
+    transition-delay: 600ms;
+}
+.first:hover .steag:nth-child(3) {
+    transition-delay: 700ms;
+}
+.steag-ro:nth-child(1) {
+    background-image: url(steag/spania.png);
+}
+.steag-ro:nth-child(2) {
+    background-image: url(steag/romania.png);
+}
+.steag-ro:nth-child(3){
+    background-image: url(steag/danemarca.png);
+}
+.second:hover .steag-ro{
+    transform: translateY(0px);
+    opacity:1;
+}
+.second:hover .steag:nth-child(1) {
+    transition-delay: 500ms;
+}
+.second:hover .steag:nth-child(2) {
+    transition-delay: 600ms;
+}
+.second:hover .steag:nth-child(3) {
+    transition-delay: 700ms;
+}
+
+
+.steag-fr:nth-child(1) {
+    background-image: url(steag/franta.png);
+}
+.steag-fr:nth-child(2) {
+    background-image: url(steag/anglia.png);
+}
+.steag-fr:nth-child(3){
+    background-image: url(steag/rusia.png);
+}
+.third:hover .steag-fr{
+    transform: translateY(0px);
+    opacity:1;
+}
+.third:hover .steag:nth-child(1) {
+    transition-delay: 500ms;
+}
+.third:hover .steag:nth-child(2) {
+    transition-delay: 600ms;
+}
+.third:hover .steag:nth-child(3) {
+    transition-delay: 700ms;
+}
