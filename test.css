@@ -12,8 +12,35 @@ body {
 #main {
     width:100vw;
     height:100vh;
-    background-color: aqua;
+    background-color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #flex{
     width:100vw;
     height:100vh;
@@ -32,6 +59,34 @@ body {
     opacity: 0.4;
     width:33.33vw;
     background-blend-mode: darken;
+}
+.first:hover #first-text, .second:hover #second-text, .third:hover #third-text {
+    translate:-50% -10px;
+    transition-delay: 800ms;
+    opacity:1;
+}
+#first-text, #second-text, #third-text {
+    backdrop-filter: blur(4px);
+    padding:10px;
+    border-radius:4px;
+    background-color: rgba(40, 40, 40, 0.299);
+    top:350px;
+    color:white;
+    left:50%;
+    translate:-50%;
+    position: absolute;
+    width:300px;
+    font-size:15px;
+    opacity:0;
+    transition: 400ms ease;
+}
+.reveal-text1, .reveal-text2, .reveal-text3 {
+  visibility: hidden;
+}
+.line {
+  position: relative;
+  overflow: hidden;
+  display: flex;
 }
 .first {
     background-image: url(images/germania.jpg);
@@ -117,6 +172,34 @@ body {
 .first:hover .steag:nth-child(3) {
     transition-delay: 700ms;
 }
+#first-more, #second-more, #third-more {
+    width:150px;
+    height:35px;
+    left:50%;
+    translate:-50%;
+    position: absolute;
+    bottom:50px;
+    background-color: #505050;
+    border-radius:100px;
+    color:white;
+    text-align: center;
+    font-size:20px;
+    line-height:35px;
+    opacity:0;
+    transition: 400ms ease;
+}
+.first:hover #first-more, .second:hover #second-more, .third:hover #third-more{
+    opacity:1;
+    translate: -50% -10px;
+    transition-delay: 1400ms;
+    cursor: pointer;
+}
+
+
+
+
+
+
 .steag-ro:nth-child(1) {
     background-image: url(steag/spania.png);
 }
