@@ -6,19 +6,42 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Primul Razboi Mondial</title>
   <link href="test.css" rel="stylesheet">
-  <script src="test.js" defer></script>
+  <script src="file.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=Quantico:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="main"></div>
-  <div id="flex">
+<div id="container">
+  <nav>
+    <div id="flex-nav">
+      <div class="nav-name">Introducere</div>
+      <div class="nav-name">Cauze</div>
+      <div class="nav-name">Inceputul</div>
+      <div class="nav-name">Aliantele</div>
+      <div class="nav-name">Sfarsitul</div>
+    </div>
+  </nav>
+  <div id="main" class="section">
+    <div id="flex-line">
+    <div class="linee"><i id="icon1" class="fa-solid fa-bomb icon"></i></div>
+    <div class="linee"><i id="icon2" class="fa-solid fa-circle-radiation icon"></i></div>
+    <div class="linee"><i id="icon3" class="fa-solid fa-bug-slash icon"></i></div>
+    <div class="linee"><i id="icon4" class="fa-solid fa-exclamation icon"></i></div>
+    <div class="linee"><i id="icon5" class="fa-solid fa-skull-crossbones icon"></i></div>
+    <div class="linee"><i id="icon6" class="fa-solid fa-triangle-exclamation icon"></i></div>
+    </div>
+    <div id="tank-bg">
+      <div id="tank"></div>
+    </div>
+  </div>
+  <div id="flex" class="section">
     <div id='first' class="first image">
       <div id="germania">
         <div id="germania-nume" class="nume">Tripla Alianta</div>
-        <div id="first-text"><p class="reveal-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        <div id="first-text"><div class="reveal-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Nibh ipsum consequat nisl vel pretium lectus quam id. 
-          Est ultricies integer quis auctor elit sed.</p></div>
+          Est ultricies integer quis auctor elit sed.</div></div>
           <div id="germania-flex">
             <div class="steag steag-ger"></div>
             <div class="steag steag-ger"></div>
@@ -30,10 +53,10 @@
     <div id='second' class="second image">
       <div id="romania">
         <div id="romania-nume" class="nume">Statele Neutre</div>
-        <div id="second-text"><p class="reveal-text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        <div id="second-text"><div class="reveal-text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Nibh ipsum consequat nisl vel pretium lectus quam id. 
-          Est ultricies integer quis auctor elit sed.</p></div>
+          Est ultricies integer quis auctor elit sed.</div></div>
         <div id="romania-flex">
           <div class="steag steag-ro"></div>
           <div class="steag steag-ro"></div>
@@ -45,10 +68,10 @@
     <div id='third' class="third image">
       <div id="franta">
         <div id="franta-nume" class="nume">Antanta</div>
-        <div id="third-text"><p class="reveal-text3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        <div id="third-text"><div class="reveal-text3">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Nibh ipsum consequat nisl vel pretium lectus quam id. 
-          Est ultricies integer quis auctor elit sed.</p></div>
+          Est ultricies integer quis auctor elit sed.</div></div>
         <div id="franta-flex">
           <div class="steag steag-fr"></div>
           <div class="steag steag-fr"></div>
@@ -58,9 +81,10 @@
       </div>
     </div>
   </div>
-
+</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js" integrity="sha512-m/n857VfrPYUcRvzCfqfrC9aMT06TQA2V0DcX/Ovovrhswa3038FfYmHlB0l/ZMukVyKWmiwZI4Pnnd7v3FwFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="test.js"></script>
 </body>
 </html>
