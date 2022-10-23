@@ -132,6 +132,7 @@ nav {
 
 
 
+
 #flex{
     width:100vw;
     height:100vh;
@@ -336,4 +337,28 @@ nav {
 }
 .third:hover .steag:nth-child(3) {
     transition-delay: 700ms;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width:1000px) {
+    #flex{
+        flex-direction: column;
+        height:300vh;
+    }
+    .image{
+        width:100vw;
+        background-size:cover;
+    }
+    .first:hover, .second:hover, .third:hover {
+        flex-grow: 2;
+    }
+    #flex:hover .image {
+        width:100vw;
+    }
+    .first, .second, .third {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
 }
