@@ -21,7 +21,7 @@ body {
 }
 .section {
   scroll-snap-stop:always;
-  scroll-snap-align:start;
+  scroll-snap-align:end;
 }
 nav {
     width:calc(100vw - 20px);
