@@ -1,260 +1,144 @@
 var first = document.querySelector("#first");
 var second = document.querySelector("#second");
 var third = document.querySelector("#third");
+var screenHeight = screen.height / 2;
 
-first.addEventListener("mouseenter", function () {
-  let splitWords = function (selector) {
-    var elements = document.querySelectorAll(selector);
 
-    elements.forEach(function (el) {
-      el.dataset.splitText = el.textContent;
-      el.innerHTML = el.textContent
-        .split(/\s/)
-        .map(function (word) {
-          return word
-            .split("-")
-            .map(function (word) {
-              return '<span class="word">' + word + "</span>";
-            })
-            .join('<span class="hyphen">-</span>');
-        })
-        .join('<span class="whitespace"> </span>');
-    });
-  };
+let splitWords = function (selector) {
+  var elements = document.querySelectorAll(selector);
 
-  let splitLines = function (selector) {
-    var elements = document.querySelectorAll(selector);
+  elements.forEach(function (el) {
+    el.dataset.splitText = el.textContent;
+    el.innerHTML = el.textContent
+      .split(/\s/)
+      .map(function (word) {
+        return word
+          .split("-")
+          .map(function (word) {
+            return '<span class="word">' + word + "</span>";
+          })
+          .join('<span class="hyphen">-</span>');
+      })
+      .join('<span class="whitespace"> </span>');
+  });
+};
 
-    splitWords(selector);
+let splitLines = function (selector) {
+  var elements = document.querySelectorAll(selector);
 
-    elements.forEach(function (el) {
-      var lines = getLines(el);
+  splitWords(selector);
 
-      var wrappedLines = "";
-      lines.forEach(function (wordsArr) {
-        wrappedLines += '<span class="line"><span class="words">';
-        wordsArr.forEach(function (word) {
-          wrappedLines += word.outerHTML;
-        });
-        wrappedLines += "</span></span>";
+  elements.forEach(function (el) {
+    var lines = getLines(el);
+
+    var wrappedLines = "";
+    lines.forEach(function (wordsArr) {
+      wrappedLines += '<span class="line"><span class="words">';
+      wordsArr.forEach(function (word) {
+        wrappedLines += word.outerHTML;
       });
-      el.innerHTML = wrappedLines;
+      wrappedLines += "</span></span>";
     });
-  };
+    el.innerHTML = wrappedLines;
+  });
+};
 
-  let getLines = function (el) {
-    var lines = [];
-    var line;
-    var words = el.querySelectorAll("span");
-    var lastTop;
-    for (var i = 0; i < words.length; i++) {
-      var word = words[i];
-      if (word.offsetTop != lastTop) {
-        // Don't start with whitespace
-        if (!word.classList.contains("whitespace")) {
-          lastTop = word.offsetTop;
+let getLines = function (el) {
+  var lines = [];
+  var line;
+  var words = el.querySelectorAll("span");
+  var lastTop;
+  for (var i = 0; i < words.length; i++) {
+    var word = words[i];
+    if (word.offsetTop != lastTop) {
+      if (!word.classList.contains("whitespace")) {
+        lastTop = word.offsetTop;
 
-          line = [];
-          lines.push(line);
-        }
+        line = [];
+        lines.push(line);
       }
-      line.push(word);
     }
-    return lines;
-  };
+    line.push(word);
+  }
+  return lines;
+};
+if (outerWidth >= 1000) {
 
-  splitLines(".reveal-text1");
-
-  let revealText = document.querySelectorAll(".reveal-text1");
-
-  gsap.registerPlugin(ScrollTrigger);
-  let revealLines = revealText.forEach((element) => {
-    const lines = element.querySelectorAll(".words");
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: element,
-        toggleActions: "restart none none reset"
-      }
-    });
-    tl.set(element, { autoAlpha: 1 });
-    tl.from(lines, 1, {
-      yPercent: 100,
-      ease: Power3.out,
-      stagger: 0.05,
-      delay: 0.9,
+  first.addEventListener("mouseenter", function first() {
+  
+    splitLines(".reveal-text1");
+  
+    let revealText = document.querySelectorAll(".reveal-text1");
+  
+    gsap.registerPlugin(ScrollTrigger);
+    let revealLines = revealText.forEach((element) => {
+      const lines = element.querySelectorAll(".words");
+  
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: element,
+          toggleActions: "restart none none reset"
+        }
+      });
+      tl.set(element, { autoAlpha: 1 });
+      tl.from(lines, 1, {
+        yPercent: 100,
+        ease: Power3.out,
+        stagger: 0.05,
+        delay: 0.9,
+      });
     });
   });
-});
-
-second.addEventListener("mouseenter", function () {
-  let splitWords = function (selector) {
-    var elements = document.querySelectorAll(selector);
-
-    elements.forEach(function (el) {
-      el.dataset.splitText = el.textContent;
-      el.innerHTML = el.textContent
-        .split(/\s/)
-        .map(function (word) {
-          return word
-            .split("-")
-            .map(function (word) {
-              return '<span class="word">' + word + "</span>";
-            })
-            .join('<span class="hyphen">-</span>');
-        })
-        .join('<span class="whitespace"> </span>');
-    });
-  };
-
-  let splitLines = function (selector) {
-    var elements = document.querySelectorAll(selector);
-
-    splitWords(selector);
-
-    elements.forEach(function (el) {
-      var lines = getLines(el);
-
-      var wrappedLines = "";
-      lines.forEach(function (wordsArr) {
-        wrappedLines += '<span class="line"><span class="words">';
-        wordsArr.forEach(function (word) {
-          wrappedLines += word.outerHTML;
-        });
-        wrappedLines += "</span></span>";
-      });
-      el.innerHTML = wrappedLines;
-    });
-  };
-
-  let getLines = function (el) {
-    var lines = [];
-    var line;
-    var words = el.querySelectorAll("span");
-    var lastTop;
-    for (var i = 0; i < words.length; i++) {
-      var word = words[i];
-      if (word.offsetTop != lastTop) {
-        // Don't start with whitespace
-        if (!word.classList.contains("whitespace")) {
-          lastTop = word.offsetTop;
-
-          line = [];
-          lines.push(line);
+  
+  second.addEventListener("mouseenter", function second() {
+  
+    splitLines(".reveal-text2");
+  
+    let revealText = document.querySelectorAll(".reveal-text2");
+  
+    gsap.registerPlugin(ScrollTrigger);
+    let revealLines = revealText.forEach((element) => {
+      const lines = element.querySelectorAll(".words");
+  
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: element,
+          toggleActions: "restart none none reset"
         }
-      }
-      line.push(word);
-    }
-    return lines;
-  };
-
-  splitLines(".reveal-text2");
-
-  let revealText = document.querySelectorAll(".reveal-text2");
-
-  gsap.registerPlugin(ScrollTrigger);
-  let revealLines = revealText.forEach((element) => {
-    const lines = element.querySelectorAll(".words");
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: element,
-        toggleActions: "restart none none reset"
-      }
-    });
-    tl.set(element, { autoAlpha: 1 });
-    tl.from(lines, 1, {
-      yPercent: 100,
-      ease: Power3.out,
-      stagger: 0.05,
-      delay: 0.9,
+      });
+      tl.set(element, { autoAlpha: 1 });
+      tl.from(lines, 1, {
+        yPercent: 100,
+        ease: Power3.out,
+        stagger: 0.05,
+        delay: 0.9,
+      });
     });
   });
-});
-
-
-third.addEventListener("mouseenter", function () {
-  let splitWords = function (selector) {
-    var elements = document.querySelectorAll(selector);
-
-    elements.forEach(function (el) {
-      el.dataset.splitText = el.textContent;
-      el.innerHTML = el.textContent
-        .split(/\s/)
-        .map(function (word) {
-          return word
-            .split("-")
-            .map(function (word) {
-              return '<span class="word">' + word + "</span>";
-            })
-            .join('<span class="hyphen">-</span>');
-        })
-        .join('<span class="whitespace"> </span>');
-    });
-  };
-
-  let splitLines = function (selector) {
-    var elements = document.querySelectorAll(selector);
-
-    splitWords(selector);
-
-    elements.forEach(function (el) {
-      var lines = getLines(el);
-
-      var wrappedLines = "";
-      lines.forEach(function (wordsArr) {
-        wrappedLines += '<span class="line"><span class="words">';
-        wordsArr.forEach(function (word) {
-          wrappedLines += word.outerHTML;
-        });
-        wrappedLines += "</span></span>";
-      });
-      el.innerHTML = wrappedLines;
-    });
-  };
-
-  let getLines = function (el) {
-    var lines = [];
-    var line;
-    var words = el.querySelectorAll("span");
-    var lastTop;
-    for (var i = 0; i < words.length; i++) {
-      var word = words[i];
-      if (word.offsetTop != lastTop) {
-        // Don't start with whitespace
-        if (!word.classList.contains("whitespace")) {
-          lastTop = word.offsetTop;
-
-          line = [];
-          lines.push(line);
+  
+  
+  third.addEventListener("mouseenter", function third() {
+    splitLines(".reveal-text3");
+  
+    let revealText = document.querySelectorAll(".reveal-text3");
+  
+    gsap.registerPlugin(ScrollTrigger);
+    let revealLines = revealText.forEach((element) => {
+      const lines = element.querySelectorAll(".words");
+  
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: element,
+          toggleActions: "restart none none reset"
         }
-      }
-      line.push(word);
-    }
-    return lines;
-  };
-
-  splitLines(".reveal-text3");
-
-  let revealText = document.querySelectorAll(".reveal-text3");
-
-  gsap.registerPlugin(ScrollTrigger);
-  let revealLines = revealText.forEach((element) => {
-    const lines = element.querySelectorAll(".words");
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: element,
-        toggleActions: "restart none none reset"
-      }
-    });
-    tl.set(element, { autoAlpha: 1 });
-    tl.from(lines, 1, {
-      yPercent: 100,
-      ease: Power3.out,
-      stagger: 0.05,
-      delay: 0.9,
+      });
+      tl.set(element, { autoAlpha: 1 });
+      tl.from(lines, 1, {
+        yPercent: 100,
+        ease: Power3.out,
+        stagger: 0.05,
+        delay: 0.9,
+      });
     });
   });
-});
-
+}
