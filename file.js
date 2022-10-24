@@ -4,6 +4,7 @@ var icon3 = document.getElementById("icon3");
 var icon4 = document.getElementById("icon4");
 var icon5 = document.getElementById("icon5");
 var icon6 = document.getElementById("icon6");
+var container = document.getElementById("container")
 
 container.onscroll = function () {scroll()};
 container.onresize = function () {scroll()}
