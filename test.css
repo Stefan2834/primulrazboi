@@ -9,22 +9,11 @@ html {
 }
 body {
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
     background-color: black;
 }
 :root {
     --gradient:linear-gradient(90deg, rgb(52, 70, 53) 0%, rgb(3, 4, 5) 100%);
-}
-#container{
-  height:100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  overflow-x:hidden;
-  position: relative;
-}
-.section {
-  scroll-snap-stop:always;
-  scroll-snap-align:end;
 }
 nav {
     width:calc(100vw - 20px);

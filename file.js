@@ -4,13 +4,12 @@ var icon3 = document.getElementById("icon3");
 var icon4 = document.getElementById("icon4");
 var icon5 = document.getElementById("icon5");
 var icon6 = document.getElementById("icon6");
-var container = document.getElementById("container")
 
-container.onscroll = function () {scroll()};
-container.onresize = function () {scroll()}
+window.onscroll = function () {scroll()};
+window.onresize = function () {scroll()}
 
 function scroll() {
-    let value = container.scrollTop;
+    let value = window.scrollTop;
     icon1.style.bottom = -500 + value * 0.4 + 'px';
     icon2.style.bottom = -900 + value * 0.2 + 'px';
     icon3.style.bottom = -1000 + value * 0.3 + 'px';
@@ -40,8 +39,9 @@ function scroll() {
     var frantaNume = document.getElementById("franta-nume");
     var thirdText = document.getElementById("third-text");
     var thirdMore = document.getElementById("third-more");
+    var screenHeight = screen.height / 2;
     if(outerWidth < 1000) {
-        if(firstTop === 0) {
+        if(firstTop <= screenHeight && secondTop > screenHeight) {
             image[0].style.opacity = '0.9';
             steagGer.forEach(steagGer => {
                 steagGer.style.transform = 'translateY(0px)';
@@ -59,7 +59,7 @@ function scroll() {
             firstMore.style.transform = 'translateY(-10px)';
             firstMore.style.opacity = '1';
             firstMore.style.transitionDelay = '1200ms';
-        } else if(secondTop === 0 ) {
+        } else if(secondTop <= screenHeight && thirdTop > screenHeight) {
             image[1].style.opacity = '0.9';
             steagRo.forEach(steagRo => {
                 steagRo.style.transform = 'translateY(0px)';
@@ -77,7 +77,7 @@ function scroll() {
             secondMore.style.transform = 'translateY(-10px)';
             secondMore.style.opacity = '1';
             secondMore.style.transitionDelay = '1200ms';
-        } else if(thirdTop === 0 ) {
+        } else if(thirdTop < screenHeight) {
             image[2].style.opacity = '0.9';
             steagFr.forEach(steagFr => {
                 steagFr.style.transform = 'translateY(0px)';
@@ -96,7 +96,7 @@ function scroll() {
             thirdMore.style.opacity = '1';
             thirdMore.style.transitionDelay = '1200ms';
         } 
-        if(firstTop !== 0) {
+        if(firstTop > screenHeight || secondTop <= screenHeight) {
             image[0].style.opacity = '0.4';
             steagGer.forEach(steagGer => {
                 steagGer.style.transform = 'translateY(-10px)';
@@ -113,7 +113,7 @@ function scroll() {
             firstMore.style.opacity = '0'
             firstMore.style.transitionDelay = '0ms';
         } 
-        if(secondTop !== 0) {
+        if(secondTop > screenHeight || thirdTop <= screenHeight) {
             image[1].style.opacity = '0.4';
             steagRo.forEach(steagRo => {
                 steagRo.style.transform = 'translateY(-10px)';
@@ -130,7 +130,7 @@ function scroll() {
             secondMore.style.opacity = '0'
             secondMore.style.transitionDelay = '0ms';
         }
-        if(thirdTop !== 0) {
+        if(thirdTop > screenHeight) {
             image[2].style.opacity = '0.4';
             steagFr.forEach(steagFr => {
                 steagFr.style.transform = 'translateY(-10px)';
