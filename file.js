@@ -5,11 +5,11 @@ var icon4 = document.getElementById("icon4");
 var icon5 = document.getElementById("icon5");
 var icon6 = document.getElementById("icon6");
 
-window.onscroll = function () {scroll()};
-window.onresize = function () {scroll()}
+container.onscroll = function () {scroll()};
+container.onresize = function () {scroll()}
 
 function scroll() {
-    let value = window.scrollTop;
+    let value = container.scrollTop;
     icon1.style.bottom = -500 + value * 0.4 + 'px';
     icon2.style.bottom = -900 + value * 0.2 + 'px';
     icon3.style.bottom = -1000 + value * 0.3 + 'px';

@@ -365,14 +365,11 @@ nav {
     #flex .image:hover {
         opacity:0.4;
     }
-    .first, .second, .third {
-        scroll-snap-align: start;
-    }
     .section {
         scroll-snap-align:unset;
     }
-    #main {
-        scroll-snap-align: end;
+    #container {
+        scroll-snap-type: unset;
     }
     .first:hover .steag-ger, .second:hover .steag-ro, .third:hover .steag-fr {
         transform: translateY(-10px);
