@@ -5,21 +5,26 @@
     font-family: 'Poppins', sans-serif;
 }
 html {
-    height:100vh;
+    scroll-behavior: smooth;
 }
 body {
     overflow-x: hidden;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    overflow-y: hidden;
     background-color: black;
-    height:100vh;
 }
 :root {
     --gradient:linear-gradient(90deg, rgb(52, 70, 53) 0%, rgb(3, 4, 5) 100%);
 }
+#container{
+  height:100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  overflow-x:hidden;
+  position: relative;
+}
 .section {
-    position:relative;
-    scroll-snap-align: end;
+  scroll-snap-stop:always;
+  scroll-snap-align:end;
 }
 nav {
     width:calc(100vw - 20px);
@@ -348,8 +353,6 @@ nav {
     .image{
         width:100vw;
         background-size:cover;
-        scroll-snap-align: end;
-        scroll-snap-stop:always;
     }
     .first:hover, .second:hover, .third:hover {
         flex-grow: 2;
@@ -361,6 +364,10 @@ nav {
     }
     #flex .image:hover {
         opacity:0.4;
+    }
+    .first, .second, .third {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
     }
     .first:hover .steag-ger, .second:hover .steag-ro, .third:hover .steag-fr {
         transform: translateY(-10px);
