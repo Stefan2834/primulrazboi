@@ -18,8 +18,13 @@ body {
 #container{
   height:100vh;
   overflow-y: scroll;
+  scroll-snap-type: y mandatory;
   overflow-x:hidden;
   position: relative;
+}
+.section {
+  scroll-snap-stop:always;
+  scroll-snap-align:end;
 }
 nav {
     width:calc(100vw - 20px);
