@@ -354,10 +354,6 @@ nav {
     #flex .image:hover {
         opacity:0.4;
     }
-    .first, .second, .third {
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-    }
     .first:hover .steag-ger, .second:hover .steag-ro, .third:hover .steag-fr {
         transform: translateY(-10px);
         opacity:0;
