@@ -142,3 +142,30 @@ if (outerWidth >= 1000) {
     });
   });
 }
+
+/*
+window.addEventListener("load", function() {
+  
+  splitLines(".reveal-intro");
+
+  let revealText = document.querySelectorAll(".reveal-intro");
+
+  gsap.registerPlugin(ScrollTrigger);
+  let revealLines = revealText.forEach((element) => {
+    const lines = element.querySelectorAll(".words");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: element,
+        toggleActions: "restart none none reset"
+      }
+    });
+    tl.set(element, { autoAlpha: 1 });
+    tl.from(lines, 1, {
+      yPercent: 100,
+      ease: Power3.out,
+      stagger: 0.08,
+      delay: 0.4,
+    });
+  });
+}); */
