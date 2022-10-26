@@ -133,9 +133,6 @@ nav:hover ~ #container{
 span.an {
     font-family: 'Freehand', cursive;
 }
-#title::selection, .an::selection {
-    background-color: transparent;
-}
 #introducere-text {
     position: relative;
     left:50%;
@@ -143,7 +140,7 @@ span.an {
     translate:-50%;
     width:calc(100% - 100px);
     color:white;
-    padding:10px;
+    padding:15px;
     line-height:25px;
 }
 #protect {
@@ -152,46 +149,46 @@ span.an {
     position: relative;
     top:100px;
 }
-#slideLeft, #slideRight, #slideTop, #slideBottom {
+.slideLeft, .slideRight, .slideTop, .slideBottom {
     position: absolute;
     background-color: var(--nice);
     transition: 400ms ease;
 }
-#slideLeft, #slideRight {
+.slideLeft, .slideRight {
     width:5px;
     height:120px;
 }
-#slideTop, #slideBottom {
+.slideTop, .slideBottom {
     height:5px;
     width:120px;
 }
-#slideLeft {
+.slideLeft {
     top:-15px;
-    left:-5px;
+    left:0px;
 }
-#slideBottom {
-    bottom:-5px;
+.slideBottom {
+    bottom:0px;
     right:-15px;
 }
-#slideTop {
+.slideTop {
     left:-15px;
-    top:-5px;
+    top:0px;
 }
-#slideRight {
-    right:-5px;
+.slideRight {
+    right:0px;
     bottom:-15px;
 }
 
-#introducere-text:hover #slideLeft {
+#introducere-text:hover .slideLeft {
     top:calc(100% - 105px);
 }
-#introducere-text:hover #slideRight {
+#introducere-text:hover .slideRight {
     bottom:calc(100% - 105px);
 }
-#introducere-text:hover #slideTop {
+#introducere-text:hover .slideTop {
     left:calc(100% - 105px);
 }
-#introducere-text:hover #slideBottom {
+#introducere-text:hover .slideBottom {
     right:calc(100% - 105px);
 }
 
@@ -227,8 +224,7 @@ span.an {
 #first-text, #second-text, #third-text {
     backdrop-filter: blur(4px);
     padding:10px;
-    border-radius:4px;
-    background-color: rgba(40, 40, 40, 0.299);
+    background-color: rgba(34, 34, 34, 0.5);
     top:350px;
     color:white;
     left:50%;
@@ -331,6 +327,19 @@ span.an {
 .first:hover .steag:nth-child(3) {
     transition-delay: 700ms;
 }
+
+#first-text:hover .slideLeft {
+    top:calc(100% - 105px);
+}
+#first-text:hover .slideRight {
+    bottom:calc(100% - 105px);
+}
+#first-text:hover .slideTop {
+    left:calc(100% - 105px);
+}
+#first-text:hover .slideBottom {
+    right:calc(100% - 105px);
+}
 #first-more, #second-more, #third-more {
     width:150px;
     height:35px;
@@ -382,6 +391,19 @@ span.an {
     transition-delay: 700ms;
 }
 
+#second-text:hover .slideLeft {
+    top:calc(100% - 105px);
+}
+#second-text:hover .slideRight {
+    bottom:calc(100% - 105px);
+}
+#second-text:hover .slideTop {
+    left:calc(100% - 105px);
+}
+#second-text:hover .slideBottom {
+    right:calc(100% - 105px);
+}
+
 
 .steag-fr:nth-child(1) {
     background-image: url(steag/franta.png);
@@ -404,6 +426,19 @@ span.an {
 }
 .third:hover .steag:nth-child(3) {
     transition-delay: 700ms;
+}
+
+#third-text:hover .slideLeft {
+    top:calc(100% - 105px);
+}
+#third-text:hover .slideRight {
+    bottom:calc(100% - 105px);
+}
+#third-text:hover .slideTop {
+    left:calc(100% - 105px);
+}
+#third-text:hover .slideBottom {
+    right:calc(100% - 105px);
 }
 
 

@@ -62,90 +62,78 @@ let getLines = function (el) {
   }
   return lines;
 };
-if (outerWidth >= 1000) {
-
-  first.addEventListener("mouseenter", function first() {
+function firstReveal () {
+  splitLines(".reveal-text1");
   
-    splitLines(".reveal-text1");
+  let revealText = document.querySelectorAll(".reveal-text1");
   
-    let revealText = document.querySelectorAll(".reveal-text1");
+  gsap.registerPlugin(ScrollTrigger);
+  let revealLines = revealText.forEach((element) => {
+    const lines = element.querySelectorAll(".words");
   
-    gsap.registerPlugin(ScrollTrigger);
-    let revealLines = revealText.forEach((element) => {
-      const lines = element.querySelectorAll(".words");
-  
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: element,
-          toggleActions: "restart none none reset"
-        }
-      });
-      tl.set(element, { autoAlpha: 1 });
-      tl.from(lines, 1, {
-        yPercent: 100,
-        ease: Power3.out,
-        stagger: 0.05,
-        delay: 0.9,
-      });
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: element,
+      }
+    });
+    tl.set(element, { autoAlpha: 1 });
+    tl.from(lines, 1, {
+      yPercent: 100,
+      ease: Power3.out,
+      stagger: 0.05,
+      delay: 0.9,
     });
   });
+}
+function secondReveal () {
+  splitLines(".reveal-text2");
   
-  second.addEventListener("mouseenter", function second() {
+  let revealText = document.querySelectorAll(".reveal-text2");
   
-    splitLines(".reveal-text2");
+  gsap.registerPlugin(ScrollTrigger);
+  let revealLines = revealText.forEach((element) => {
+    const lines = element.querySelectorAll(".words");
   
-    let revealText = document.querySelectorAll(".reveal-text2");
-  
-    gsap.registerPlugin(ScrollTrigger);
-    let revealLines = revealText.forEach((element) => {
-      const lines = element.querySelectorAll(".words");
-  
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: element,
-          toggleActions: "restart none none reset"
-        }
-      });
-      tl.set(element, { autoAlpha: 1 });
-      tl.from(lines, 1, {
-        yPercent: 100,
-        ease: Power3.out,
-        stagger: 0.05,
-        delay: 0.9,
-      });
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: element,
+      }
+    });
+    tl.set(element, { autoAlpha: 1 });
+    tl.from(lines, 1, {
+      yPercent: 100,
+      ease: Power3.out,
+      stagger: 0.05,
+      delay: 0.9,
     });
   });
+}
+function thirdReveal () {
+  splitLines(".reveal-text3");
   
+  let revealText = document.querySelectorAll(".reveal-text3");
   
-  third.addEventListener("mouseenter", function third() {
-    splitLines(".reveal-text3");
+  gsap.registerPlugin(ScrollTrigger);
+  let revealLines = revealText.forEach((element) => {
+    const lines = element.querySelectorAll(".words");
   
-    let revealText = document.querySelectorAll(".reveal-text3");
-  
-    gsap.registerPlugin(ScrollTrigger);
-    let revealLines = revealText.forEach((element) => {
-      const lines = element.querySelectorAll(".words");
-  
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: element,
-          toggleActions: "restart none none reset"
-        }
-      });
-      tl.set(element, { autoAlpha: 1 });
-      tl.from(lines, 1, {
-        yPercent: 100,
-        ease: Power3.out,
-        stagger: 0.05,
-        delay: 0.9,
-      });
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: element,
+      }
+    });
+    tl.set(element, { autoAlpha: 1 });
+    tl.from(lines, 1, {
+      yPercent: 100,
+      ease: Power3.out,
+      stagger: 0.05,
+      delay: 0.9,
     });
   });
 }
 
 
-window.addEventListener("load", function() {
-  
+function intro() {
   splitLines(".reveal-intro");
 
   let revealText = document.querySelectorAll(".reveal-intro");
@@ -157,7 +145,6 @@ window.addEventListener("load", function() {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: element,
-        toggleActions: "restart none none reset"
       }
     });
     tl.set(element, { autoAlpha: 1 });
@@ -168,31 +155,34 @@ window.addEventListener("load", function() {
       delay: 0.4,
     });
   });
-});
-
-
+} 
 window.addEventListener("resize", function() {
-  
-  splitLines(".reveal-intro");
-
-  let revealText = document.querySelectorAll(".reveal-intro");
-
-  gsap.registerPlugin(ScrollTrigger);
-  let revealLines = revealText.forEach((element) => {
-    const lines = element.querySelectorAll(".words");
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: element,
-        toggleActions: "restart none none reset"
-      }
-    });
-    tl.set(element, { autoAlpha: 1 });
-    tl.from(lines, 1, {
-      yPercent: 100,
-      ease: Power3.out,
-      stagger: 0.08,
-      delay: 0.4,
-    });
-  });
+  intro();
+  widthTest();
 });
+window.addEventListener('load', function () {
+  intro();
+  widthTest();
+})
+var container = document.getElementById("container");
+
+function widthTest (e) {
+  if (outerWidth >= 1000) {
+    first.addEventListener("mouseenter", () => firstReveal());
+    second.addEventListener("mouseenter", () => secondReveal());
+    third.addEventListener("mouseenter", () => thirdReveal());
+  } else if(outerWidth < 1000) {
+    container.addEventListener("scroll", function () {
+      let firstTop = first.getBoundingClientRect().top
+      let secondTop = second.getBoundingClientRect().top
+      let thirdTop = third.getBoundingClientRect().top
+      if (firstTop <= screenHeight && secondTop > screenHeight) {
+        firstReveal();
+      } else if(secondTop <= screenHeight && thirdTop > screenHeight) {
+        secondReveal();
+      } else if(thirdTop <= screenHeight) {
+        thirdReveal();
+      }
+    })
+  }
+}
