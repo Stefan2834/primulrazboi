@@ -103,10 +103,10 @@ nav:hover ~ #container{
 
 #main {
     width:100vw;
-    height:800px;
     background-color:rgb(18, 18, 24);
     position: relative;
     display: flex;
+    height:auto;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
@@ -145,6 +145,12 @@ span.an {
     color:white;
     padding:10px;
     line-height:25px;
+}
+#protect {
+    width:100%;
+    height:200px;
+    position: relative;
+    top:100px;
 }
 #slideLeft, #slideRight, #slideTop, #slideBottom {
     position: absolute;
@@ -190,20 +196,7 @@ span.an {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*----------Aliante----------*/
 
 
 #flex{
@@ -211,6 +204,7 @@ span.an {
     height:100vh;
     position: relative;
     display: flex;
+    top:0;
 }
 .image {
     height:100vh;
