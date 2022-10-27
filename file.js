@@ -1,7 +1,5 @@
-var container = document.getElementById("container")
-
-container.onscroll = function () {scroll()};
-container.onresize = function () {scroll()}
+window.onscroll = function () {scroll(), menuClose()};
+window.onresize = function () {scroll()}
 
 function scroll() {    
     var first = document.getElementById("first")
@@ -136,3 +134,38 @@ function scroll() {
     }
 }
 
+// Menu 
+
+var menuBtn = document.getElementById("menu");
+var nav = document.querySelector("nav");
+var navName = document.querySelectorAll(".nav-name")
+var Menu = false;
+
+menuBtn.addEventListener("click", () => {
+   menu();
+})
+
+
+function menu () {
+    if(!Menu) {
+        nav.style.top = '0';
+        navName.forEach(navName => {
+            navName.style.opacity = '1';
+            navName.style.transform = 'translate(0, 0)';
+        })
+        Menu = true;
+    } else {
+        nav.style.top = '-100vh';
+        navName.forEach(navName => {
+            navName.style.opacity = '0';
+            navName.style.transform = 'translate(0, -20px)';
+        })
+        Menu = false;
+    }
+}
+
+
+function menuClose() {
+    Menu = true;
+    menu();
+}

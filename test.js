@@ -164,7 +164,6 @@ window.addEventListener('load', function () {
   intro();
   widthTest();
 })
-var container = document.getElementById("container");
 
 function widthTest (e) {
   if (outerWidth >= 1000) {
@@ -172,7 +171,7 @@ function widthTest (e) {
     second.addEventListener("mouseenter", () => secondReveal());
     third.addEventListener("mouseenter", () => thirdReveal());
   } else if(outerWidth < 1000) {
-    container.addEventListener("scroll", function () {
+    window.addEventListener("scroll", function () {
       let firstTop = first.getBoundingClientRect().top
       let secondTop = second.getBoundingClientRect().top
       let thirdTop = third.getBoundingClientRect().top
