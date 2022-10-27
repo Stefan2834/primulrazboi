@@ -14,7 +14,7 @@ body {
 }
 :root {
     --gradient:linear-gradient(90deg, rgb(52, 70, 53) 0%, rgb(3, 4, 5) 100%);
-    --principal:rgb(206, 206, 206);
+    --principal:rgb(18, 18, 24);
     --nice:rgb(174, 64, 201);
 }
 ::selection {
@@ -102,16 +102,49 @@ nav {
 
 
 
-
-
+/*----------White-space---------*/
 
 
 .white-space {
     width:100vw;
     height:100px;
-    background-color: white;
+    background-color: rgb(31, 31, 32);
     position:relative;
     top:0;
+    box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.628);
+}
+.white-text {
+    font-size:40px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    line-height:40px;
+    font-family:'Public sans', sans-serif;
+    font-weight: 700;
+    color:white;
+    background-color: rgb(31,31,32);
+    z-index:1;
+}
+#white-cauzele {
+    width:160px;
+    left:50px;
+}
+#white-inceputul {
+    width:200px;
+    right:50px;
+}
+#white-aliantele {
+    left:50px;
+    width:180px;
+}
+.white-line {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:50px;
+    width:calc(100vw - 100px);
+    height:5px;
+    background-color: rgba(255, 255, 255, 0.678);
 }
 
 
@@ -210,6 +243,26 @@ span.an {
 }
 #introducere-text:hover .slideBottom {
     right:calc(100% - 105px);
+}
+
+
+/*----------Cauzele----------*/
+
+
+#cauzele {
+    width:100vw;
+    height:800px;
+    background-color: var(--principal);
+}
+
+
+/*----------Inceputul----------*/
+
+
+#inceputul {
+    width:100vw;
+    height:1000px;
+    background-color: var(--principal);
 }
 
 
