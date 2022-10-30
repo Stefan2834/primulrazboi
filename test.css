@@ -282,7 +282,7 @@ span.an {
     transition: 400ms ease;
     overflow: hidden;
     flex-grow:2;
-    background-size:50vw auto;
+    background-size:cover;
     background-position: center top;
     background-repeat: no-repeat;
     opacity: 0.4;
