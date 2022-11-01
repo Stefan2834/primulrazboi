@@ -92,12 +92,26 @@ nav {
     color:white;
     cursor: pointer;
     position: relative;
-    top:10px;
+    top:15px;
     left:20px;
-    background-image: url(images/menu-outline.svg);
     background-size: 40px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#barTop, #barMiddle, #barBottom {
+    width:35px;
+    height:4px;
     background-color: white;
-    border-radius: 50%;
+    border-radius: 4px;
+    transition:400ms ease;
+}
+#barTop {
+    transform-origin: left bottom;
+}
+#barBottom {
+    transform-origin: left top;
 }
 
 

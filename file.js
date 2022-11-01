@@ -138,7 +138,10 @@ function scroll() {
 
 var menuBtn = document.getElementById("menu");
 var nav = document.querySelector("nav");
-var navName = document.querySelectorAll(".nav-name")
+var navName = document.querySelectorAll(".nav-name");
+var barTop = document.getElementById("barTop");
+var barMiddle = document.getElementById("barMiddle");
+var barBottom = document.getElementById("barBottom");
 var Menu = false;
 
 menuBtn.addEventListener("click", () => {
@@ -153,6 +156,10 @@ function menu () {
             navName.style.opacity = '1';
             navName.style.transform = 'translate(0, 0)';
         })
+        barTop.style.transform = 'rotate(45deg)';
+        barBottom.style.transform = 'rotate(-45deg)';
+        barMiddle.style.opacity = '0';
+        barMiddle.style.transform = 'translateX(-10px)'
         Menu = true;
     } else {
         nav.style.top = '-100vh';
@@ -160,6 +167,10 @@ function menu () {
             navName.style.opacity = '0';
             navName.style.transform = 'translate(0, -20px)';
         })
+        barTop.style.transform = 'rotate(0)';
+        barBottom.style.transform = 'rotate(0)';
+        barMiddle.style.opacity = '1';
+        barMiddle.style.transform = 'translateX(0px)'
         Menu = false;
     }
 }
