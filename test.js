@@ -3,7 +3,6 @@ var second = document.querySelector("#second");
 var third = document.querySelector("#third");
 var screenHeight = screen.height / 2;
 
-
 let splitWords = function (selector) {
   var elements = document.querySelectorAll(selector);
 
