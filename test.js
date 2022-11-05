@@ -184,3 +184,41 @@ function widthTest (e) {
     })
   }
 }
+
+setTimeout(function slide () {
+  const moveUp = gsap.utils.toArray('.moveUp');
+  
+  moveUp.forEach((moveUp, i) => {
+    const animemoveUp = gsap.fromTo(moveUp, {autoAlpha: 0, y: 0}, {duration: 1, autoAlpha: 1, y: 0});
+    ScrollTrigger.create({
+      trigger: moveUp,
+      animation: animemoveUp,
+      toggleActions: 'play reset play reset',
+      once: false,
+    });
+  });
+  const moveLeft = gsap.utils.toArray('.moveLeft');
+    
+  moveLeft.forEach((moveLeft, i) => {
+    const animmoveLeft = gsap.fromTo(moveLeft, {autoAlpha: 0, x: -100 }, {duration: 1, autoAlpha: 1, x: 0});
+    ScrollTrigger.create({
+      trigger: moveLeft,
+      animation: animmoveLeft,
+      toggleActions: 'restart reset play play',
+      once: false,
+    });
+  });
+
+  const moveRight = gsap.utils.toArray('.moveRight');
+    
+  moveRight.forEach((moveRight, i) => {
+    const animmoveRight = gsap.fromTo(moveRight, {autoAlpha: 0, x: 100 }, {duration: 1, autoAlpha: 1, x: 0});
+    ScrollTrigger.create({
+      trigger: moveRight,
+      animation: animmoveRight,
+      toggleActions: 'restart reset play play',
+      once: false,
+    });
+  });
+}, 1000)
+
