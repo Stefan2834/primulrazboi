@@ -127,6 +127,7 @@ nav {
     position: absolute;
     top:50%;
     transform: translateY(-50%);
+    overflow:hidden;
 }
 .background-text::selection {
     background-color: transparent;
@@ -402,6 +403,7 @@ span.an {
     background-size: cover;
     margin-top:10px;
     background-position: top;
+    overflow: hidden;
 }
 .cauze-poza-left:nth-child(1) {
     background-image: url(cauze/map.jpg);
@@ -824,5 +826,10 @@ span.an {
     }
     .cauze-poza-right:nth-child(1) {
         background-position-y: 0px;
+    }
+}
+@media screen and (max-width:500px) {
+    .video {
+        scale:0.6;
     }
 }

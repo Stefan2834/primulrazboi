@@ -1,224 +1,187 @@
-var first = document.querySelector("#first");
-var second = document.querySelector("#second");
-var third = document.querySelector("#third");
-var screenHeight = screen.height / 2;
+window.onscroll = function () {scroll(), menuClose()};
+window.onresize = function () {scroll()}
 
-let splitWords = function (selector) {
-  var elements = document.querySelectorAll(selector);
+function scroll() {    
+    var first = document.getElementById("first")
+    var firstTop = first.getBoundingClientRect().top;
+    var image = document.querySelectorAll(".image")
+    var steagGer = document.querySelectorAll(".steag-ger");
+    var germaniaNume = document.getElementById("germania-nume");
+    var firstText = document.getElementById("first-text");
+    var firstMore = document.getElementById("first-more");
 
-  elements.forEach(function (el) {
-    el.dataset.splitText = el.textContent;
-    el.innerHTML = el.textContent
-      .split(/\s/)
-      .map(function (word) {
-        return word
-          .split("-")
-          .map(function (word) {
-            return '<span class="word">' + word + "</span>";
-          })
-          .join('<span class="hyphen">-</span>');
-      })
-      .join('<span class="whitespace"> </span>');
-  });
-};
+    var second = document.getElementById("second")
+    var secondTop = second.getBoundingClientRect().top;
+    var steagRo = document.querySelectorAll(".steag-ro");
+    var romaniaNume = document.getElementById("romania-nume");
+    var secondText = document.getElementById("second-text");
+    var secondMore = document.getElementById("second-more");
 
-let splitLines = function (selector) {
-  var elements = document.querySelectorAll(selector);
-
-  splitWords(selector);
-
-  elements.forEach(function (el) {
-    var lines = getLines(el);
-
-    var wrappedLines = "";
-    lines.forEach(function (wordsArr) {
-      wrappedLines += '<span class="line"><span class="words">';
-      wordsArr.forEach(function (word) {
-        wrappedLines += word.outerHTML;
-      });
-      wrappedLines += "</span></span>";
-    });
-    el.innerHTML = wrappedLines;
-  });
-};
-
-let getLines = function (el) {
-  var lines = [];
-  var line;
-  var words = el.querySelectorAll("span");
-  var lastTop;
-  for (var i = 0; i < words.length; i++) {
-    var word = words[i];
-    if (word.offsetTop != lastTop) {
-      if (!word.classList.contains("whitespace")) {
-        lastTop = word.offsetTop;
-
-        line = [];
-        lines.push(line);
-      }
+    var third = document.getElementById("third")
+    var thirdTop = third.getBoundingClientRect().top;
+    var steagFr = document.querySelectorAll(".steag-fr");
+    var frantaNume = document.getElementById("franta-nume");
+    var thirdText = document.getElementById("third-text");
+    var thirdMore = document.getElementById("third-more");
+    var screenHeight = screen.height / 2;
+    if(outerWidth < 1000) {
+        if(firstTop <= screenHeight && secondTop > screenHeight) {
+            image[0].style.opacity = '0.9';
+            steagGer.forEach(steagGer => {
+                steagGer.style.transform = 'translateY(0px)';
+                steagGer.style.opacity = '1';
+            })
+            steagGer[0].style.transitionDelay = '500ms';
+            steagGer[1].style.transitionDelay = '600ms';
+            steagGer[2].style.transitionDelay = '700ms';
+            germaniaNume.style.transform = 'translateY(0px)';
+            germaniaNume.style.opacity = '1';
+            germaniaNume.style.transitionDelay = '400ms';
+            firstText.style.transform = 'translateY(-10px)';
+            firstText.style.opacity = '1';
+            firstText.style.transitionDelay = '800ms'
+            firstMore.style.transform = 'translateY(-10px)';
+            firstMore.style.opacity = '1';
+            firstMore.style.transitionDelay = '1200ms';
+        } else if(secondTop <= screenHeight && thirdTop > screenHeight) {
+            image[1].style.opacity = '0.9';
+            steagRo.forEach(steagRo => {
+                steagRo.style.transform = 'translateY(0px)';
+                steagRo.style.opacity = '1';
+            })
+            steagRo[0].style.transitionDelay = '500ms';
+            steagRo[1].style.transitionDelay = '600ms';
+            steagRo[2].style.transitionDelay = '700ms';
+            romaniaNume.style.transform = 'translateY(0px)';
+            romaniaNume.style.opacity = '1';
+            romaniaNume.style.transitionDelay = '400ms';
+            secondText.style.transform = 'translateY(-10px)';
+            secondText.style.opacity = '1';
+            secondText.style.transitionDelay = '800ms'
+            secondMore.style.transform = 'translateY(-10px)';
+            secondMore.style.opacity = '1';
+            secondMore.style.transitionDelay = '1200ms';
+        } else if(thirdTop < screenHeight) {
+            image[2].style.opacity = '0.9';
+            steagFr.forEach(steagFr => {
+                steagFr.style.transform = 'translateY(0px)';
+                steagFr.style.opacity = '1';
+            })
+            steagFr[0].style.transitionDelay = '500ms';
+            steagFr[1].style.transitionDelay = '600ms';
+            steagFr[2].style.transitionDelay = '700ms';
+            frantaNume.style.transform = 'translateY(0px)';
+            frantaNume.style.opacity = '1';
+            frantaNume.style.transitionDelay = '400ms';
+            thirdText.style.transform = 'translateY(-10px)';
+            thirdText.style.opacity = '1';
+            thirdText.style.transitionDelay = '800ms'
+            thirdMore.style.transform = 'translateY(-10px)';
+            thirdMore.style.opacity = '1';
+            thirdMore.style.transitionDelay = '1200ms';
+        } 
+        if(firstTop > screenHeight || secondTop <= screenHeight) {
+            image[0].style.opacity = '0.4';
+            steagGer.forEach(steagGer => {
+                steagGer.style.transform = 'translateY(-10px)';
+                steagGer.style.opacity = '0';
+                steagGer.style.transitionDelay = '0ms';
+            })
+            germaniaNume.style.transform = 'translateY(-10px)';
+            germaniaNume.style.opacity = '0';
+            germaniaNume.style.transitionDelay = '0ms';
+            firstText.style.transform = 'translateY(0px)';
+            firstText.style.opacity = '0';
+            firstText.style.transitionDelay = '0ms';
+            firstMore.style.transform = 'translateY(0px)';
+            firstMore.style.opacity = '0'
+            firstMore.style.transitionDelay = '0ms';
+        } 
+        if(secondTop > screenHeight || thirdTop <= screenHeight) {
+            image[1].style.opacity = '0.4';
+            steagRo.forEach(steagRo => {
+                steagRo.style.transform = 'translateY(-10px)';
+                steagRo.style.opacity = '0';
+                steagRo.style.transitionDelay = '0ms';
+            })
+            romaniaNume.style.transform = 'translateY(-10px)';
+            romaniaNume.style.opacity = '0';
+            romaniaNume.style.transitionDelay = '0ms';
+            secondText.style.transform = 'translateY(0px)';
+            secondText.style.opacity = '0';
+            secondText.style.transitionDelay = '0ms';
+            secondMore.style.transform = 'translateY(0px)';
+            secondMore.style.opacity = '0'
+            secondMore.style.transitionDelay = '0ms';
+        }
+        if(thirdTop > screenHeight) {
+            image[2].style.opacity = '0.4';
+            steagFr.forEach(steagFr => {
+                steagFr.style.transform = 'translateY(-10px)';
+                steagFr.style.opacity = '0';
+                steagFr.style.transitionDelay = '0ms';
+            })
+            frantaNume.style.transform = 'translateY(-10px)';
+            frantaNume.style.opacity = '0';
+            frantaNume.style.transitionDelay = '0ms';
+            thirdText.style.transform = 'translateY(0px)';
+            thirdText.style.opacity = '0';
+            thirdText.style.transitionDelay = '0ms';
+            thirdMore.style.transform = 'translateY(0px)';
+            thirdMore.style.opacity = '0'
+            thirdMore.style.transitionDelay = '0ms';
+        }
     }
-    line.push(word);
-  }
-  return lines;
-};
-function firstReveal () {
-  splitLines(".reveal-text1");
-  
-  let revealText = document.querySelectorAll(".reveal-text1");
-  
-  gsap.registerPlugin(ScrollTrigger);
-  let revealLines = revealText.forEach((element) => {
-    const lines = element.querySelectorAll(".words");
-  
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: element,
-      }
-    });
-    tl.set(element, { autoAlpha: 1 });
-    tl.from(lines, 1, {
-      yPercent: 100,
-      ease: Power3.out,
-      stagger: 0.05,
-      delay: 0.9,
-    });
-  });
-}
-function secondReveal () {
-  splitLines(".reveal-text2");
-  
-  let revealText = document.querySelectorAll(".reveal-text2");
-  
-  gsap.registerPlugin(ScrollTrigger);
-  let revealLines = revealText.forEach((element) => {
-    const lines = element.querySelectorAll(".words");
-  
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: element,
-      }
-    });
-    tl.set(element, { autoAlpha: 1 });
-    tl.from(lines, 1, {
-      yPercent: 100,
-      ease: Power3.out,
-      stagger: 0.05,
-      delay: 0.9,
-    });
-  });
-}
-function thirdReveal () {
-  splitLines(".reveal-text3");
-  
-  let revealText = document.querySelectorAll(".reveal-text3");
-  
-  gsap.registerPlugin(ScrollTrigger);
-  let revealLines = revealText.forEach((element) => {
-    const lines = element.querySelectorAll(".words");
-  
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: element,
-      }
-    });
-    tl.set(element, { autoAlpha: 1 });
-    tl.from(lines, 1, {
-      yPercent: 100,
-      ease: Power3.out,
-      stagger: 0.05,
-      delay: 0.9,
-    });
-  });
 }
 
+// Menu 
 
-function intro() {
-  splitLines(".reveal-intro");
+var menuBtn = document.getElementById("menu");
+var nav = document.querySelector("nav");
+var navName = document.querySelectorAll(".nav-name");
+var barTop = document.getElementById("barTop");
+var barMiddle = document.getElementById("barMiddle");
+var barBottom = document.getElementById("barBottom");
+var main = document.getElementById("main");
+var Menu = false;
 
-  let revealText = document.querySelectorAll(".reveal-intro");
-
-  gsap.registerPlugin(ScrollTrigger);
-  let revealLines = revealText.forEach((element) => {
-    const lines = element.querySelectorAll(".words");
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: element,
-      }
-    });
-    tl.set(element, { autoAlpha: 1 });
-    tl.from(lines, 1, {
-      yPercent: 100,
-      ease: Power3.out,
-      stagger: 0.08,
-      delay: 0.4,
-    });
-  });
-} 
-window.addEventListener("resize", function() {
-  intro();
-  widthTest();
-});
-window.addEventListener('load', function () {
-  intro();
-  widthTest();
+menuBtn.addEventListener("click", () => {
+   menu();
 })
 
-function widthTest (e) {
-  if (outerWidth >= 1000) {
-    first.addEventListener("mouseenter", () => firstReveal());
-    second.addEventListener("mouseenter", () => secondReveal());
-    third.addEventListener("mouseenter", () => thirdReveal());
-  } else if(outerWidth < 1000) {
-    window.addEventListener("scroll", function () {
-      let firstTop = first.getBoundingClientRect().top
-      let secondTop = second.getBoundingClientRect().top
-      let thirdTop = third.getBoundingClientRect().top
-      if (firstTop <= screenHeight && secondTop > screenHeight) {
-        firstReveal();
-      } else if(secondTop <= screenHeight && thirdTop > screenHeight) {
-        secondReveal();
-      } else if(thirdTop <= screenHeight) {
-        thirdReveal();
-      }
-    })
-  }
+
+function menu () {
+    if(!Menu) {
+        nav.style.top = '0';
+        navName.forEach(navName => {
+            navName.style.opacity = '1';
+            navName.style.transform = 'translate(0, 0)';
+        })
+        barTop.style.transform = 'rotate(45deg)';
+        barBottom.style.transform = 'rotate(-45deg)';
+        barMiddle.style.opacity = '0';
+        barMiddle.style.transform = 'translateX(-10px)'
+        Menu = true;
+    } else {
+        nav.style.top = '-100vh';
+        navName.forEach(navName => {
+            navName.style.opacity = '0';
+            navName.style.transform = 'translate(0, -20px)';
+        })
+        barTop.style.transform = 'rotate(0)';
+        barBottom.style.transform = 'rotate(0)';
+        barMiddle.style.opacity = '1';
+        barMiddle.style.transform = 'translateX(0px)'
+        Menu = false;
+    }
 }
 
-setTimeout(function slide () {
-  const moveUp = gsap.utils.toArray('.moveUp');
-  
-  moveUp.forEach((moveUp, i) => {
-    const animemoveUp = gsap.fromTo(moveUp, {autoAlpha: 0, y: 100}, {duration: 1, autoAlpha: 1, y: 0});
-    ScrollTrigger.create({
-      trigger: moveUp,
-      animation: animemoveUp,
-      toggleActions: 'play reset play reset',
-      once: false,
-    });
-  });
-  const moveLeft = gsap.utils.toArray('.moveLeft');
-    
-  moveLeft.forEach((moveLeft, i) => {
-    const animmoveLeft = gsap.fromTo(moveLeft, {autoAlpha: 0, x: -100 }, {duration: 1, autoAlpha: 1, x: 0});
-    ScrollTrigger.create({
-      trigger: moveLeft,
-      animation: animmoveLeft,
-      toggleActions: 'restart reset play play',
-      once: false,
-    });
-  });
 
-  const moveRight = gsap.utils.toArray('.moveRight');
-    
-  moveRight.forEach((moveRight, i) => {
-    const animmoveRight = gsap.fromTo(moveRight, {autoAlpha: 0, x: 100 }, {duration: 1, autoAlpha: 1, x: 0});
-    ScrollTrigger.create({
-      trigger: moveRight,
-      animation: animmoveRight,
-      toggleActions: 'restart reset play play',
-      once: false,
-    });
-  });
-}, 1000)
+function menuClose() {
+    Menu = true;
+    menu();
+}
 
+nav.addEventListener("click", function () {
+    menuClose();  
+})
