@@ -231,7 +231,7 @@ function slide () {
       ScrollTrigger.create({
         trigger: moveLeft,
         animation: animmoveLeft,
-        toggleActions: 'restart reset play play',
+        toggleActions: 'play none none none',
         once: false,
       });
     });
@@ -243,7 +243,7 @@ function slide () {
       ScrollTrigger.create({
         trigger: moveRight,
         animation: animmoveRight,
-        toggleActions: 'restart reset play play',
+        toggleActions: 'play none none none',
         once: false,
       });
     }); 
