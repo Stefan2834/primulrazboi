@@ -3,6 +3,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    overflow-x: visible;
 }
 html {
     scroll-behavior: smooth;
@@ -240,7 +241,8 @@ nav {
 }
 #main-left, #main-right {
     height:100%;
-    position: relative;   
+    position: relative; 
+    background-color: red;  
 }
 #main-left {
     width:30vw;
@@ -264,6 +266,7 @@ nav {
     color:rgb(212, 212, 189);
     text-align: center;
     line-height: 50px;
+    overflow:hidden;
 }
 span.an {
     font-family: 'Freehand', cursive;
@@ -342,6 +345,7 @@ span.an {
     width:560px;
     height:315px;
     position: relative;
+    overflow: hidden;
 }
 .video::selection {
     background-color: transparent;
