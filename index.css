@@ -410,9 +410,6 @@ span.an {
     background-position: top;
     overflow: hidden;
 }
-.moveRight {
-    overflow:hidden;
-}
 .cauze-poza-left:nth-child(1) {
     background-image: url(cauze/map.jpg);
 }
