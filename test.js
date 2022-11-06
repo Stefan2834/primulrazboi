@@ -189,7 +189,7 @@ setTimeout(function slide () {
   const moveUp = gsap.utils.toArray('.moveUp');
   
   moveUp.forEach((moveUp, i) => {
-    const animemoveUp = gsap.fromTo(moveUp, {autoAlpha: 0, y: 0}, {duration: 1, autoAlpha: 1, y: 0});
+    const animemoveUp = gsap.fromTo(moveUp, {autoAlpha: 0, y: 100}, {duration: 1, autoAlpha: 1, y: 0});
     ScrollTrigger.create({
       trigger: moveUp,
       animation: animemoveUp,

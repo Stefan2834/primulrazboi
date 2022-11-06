@@ -113,6 +113,12 @@ nav {
 #barBottom {
     transform-origin: left top;
 }
+
+
+/*----------Design----------*/
+
+
+
 .background-text {
     font-size:200px;
     color:rgba(255, 255, 255, 0.1);
@@ -124,6 +130,47 @@ nav {
 }
 .background-text::selection {
     background-color: transparent;
+}
+.corner-bottom-left,.corner-bottom-right,.corner-top-left,.corner-top-right {
+    position: absolute;
+    z-index:-1;
+}
+.corner-top-left {
+    top:0;
+    left:0;
+    width:100px;
+    height:100px;
+    border-top: 5px solid white;
+    border-left:5px solid white;
+    border-top-left-radius:  10px;
+}
+.corner-top-right {
+    top:0;
+    right:0;
+    width:100px;
+    height:100px;
+    border-top: 5px solid white;
+    border-right:5px solid white;
+    border-top-right-radius:  10px;
+}
+.corner-bottom-left {
+    bottom:0;
+    left:0;
+    width:100px;
+    height:100px;
+    border-bottom: 5px solid white;
+    border-left:5px solid white;
+    border-bottom-left-radius:  10px;
+    z-index:0;
+}
+.corner-bottom-right {
+    bottom:0;
+    right:0;
+    width:100px;
+    height:100px;
+    border-bottom: 5px solid white;
+    border-right:5px solid white;
+    border-bottom-right-radius:  10px;
 }
 
 
@@ -187,14 +234,13 @@ nav {
     display: flex;
     height:auto;
     justify-content: space-around;
-    align-items: center;
+    align-items:baseline;
     flex-direction: row;
-    align-content: space-around;
 }
 #main-left, #main-right, #main-center {
     height:100%;
-    width: 33vw;
-    position: relative;
+    width: 30vw;
+    position: relative;    
 }
 #title {
     width:400px;
@@ -217,7 +263,7 @@ span.an {
     left:50%;
     top:100px;
     translate:-50%;
-    width:calc(100% - 100px);
+    width:calc(100% - 50px);
     color:white;
     padding:15px;
     line-height:25px;
@@ -270,6 +316,13 @@ span.an {
 #introducere-text:hover .slideBottom {
     right:calc(100% - 105px);
 }
+.video {
+    width:560px;
+    height:315px;
+    position: absolute;
+    right:50px;
+    top:50px;
+}
 
 
 /*----------Cauzele----------*/
@@ -298,6 +351,7 @@ span.an {
 }
 #cauze-center {
     width:55vw;
+    z-index:1;
 }
 .cauze-text {
     color:white;

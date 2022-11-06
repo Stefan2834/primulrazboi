@@ -142,6 +142,7 @@ var navName = document.querySelectorAll(".nav-name");
 var barTop = document.getElementById("barTop");
 var barMiddle = document.getElementById("barMiddle");
 var barBottom = document.getElementById("barBottom");
+var main = document.getElementById("main");
 var Menu = false;
 
 menuBtn.addEventListener("click", () => {
@@ -180,3 +181,7 @@ function menuClose() {
     Menu = true;
     menu();
 }
+
+nav.addEventListener("click", function () {
+    menuClose();  
+})
