@@ -280,6 +280,7 @@ span.an {
     color:white;
     padding:15px;
     line-height:25px;
+    box-shadow: 3px 3px 5px black;
 }
 #protect {
     width:100%;
@@ -376,7 +377,6 @@ span.an {
 }
 #cauze-left,#cauze-right {
     width:20vw;
-    overflow: hidden;
 }
 #cauze-center {
     width:55vw;
@@ -409,7 +409,7 @@ span.an {
     background-size: cover;
     margin-top:10px;
     background-position: top;
-    box-shadow: 3px 3px 5px black;
+    box-shadow: 3px 5px 5px black;
 }
 .cauze-poza-left:nth-child(1) {
     background-image: url(cauze/map.jpg);
