@@ -242,7 +242,6 @@ nav {
 #main-left, #main-right {
     height:100%;
     position: relative; 
-    background-color: red;  
 }
 #main-left {
     width:30vw;
