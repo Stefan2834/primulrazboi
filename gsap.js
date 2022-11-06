@@ -184,7 +184,6 @@ function widthTest (e) {
     })
   }
 }
-/*
 setTimeout(function slide () {
   const moveUp = gsap.utils.toArray('.moveUp');
   
@@ -221,4 +220,3 @@ setTimeout(function slide () {
     });
   });
 }, 1000)
-*/
