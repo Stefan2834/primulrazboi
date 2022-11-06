@@ -158,6 +158,7 @@ function intro() {
 window.addEventListener("resize", function() {
   intro();
   widthTest();
+  slide();
 });
 window.addEventListener('load', function () {
   intro();
@@ -184,7 +185,7 @@ function widthTest (e) {
     })
   }
 }
-setTimeout(function slide () {
+function slide () {
   const moveUp = gsap.utils.toArray('.moveUp');
   
   moveUp.forEach((moveUp, i) => {
@@ -247,4 +248,6 @@ setTimeout(function slide () {
       });
     }); 
   }
-}, 1000)
+}
+
+setTimeout(slide(),1000);
