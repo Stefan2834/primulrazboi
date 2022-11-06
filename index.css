@@ -242,6 +242,7 @@ nav {
 #main-left, #main-right {
     height:100%;
     position: relative; 
+    overflow: hidden;
 }
 #main-left {
     width:30vw;
@@ -374,6 +375,7 @@ span.an {
 }
 #cauze-left,#cauze-right {
     width:20vw;
+    overflow: hidden;
 }
 #cauze-center {
     width:55vw;
@@ -407,6 +409,9 @@ span.an {
     margin-top:10px;
     background-position: top;
     overflow: hidden;
+}
+.moveRight {
+    overflow:hidden;
 }
 .cauze-poza-left:nth-child(1) {
     background-image: url(cauze/map.jpg);
