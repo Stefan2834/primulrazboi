@@ -417,6 +417,7 @@ span.an {
     margin-top:10px;
     background-position: top;
     box-shadow: 3px 5px 5px black;
+    transition:400ms ease-out;
     z-index:5;
 }
 .cauze-poza-left:nth-child(1) {
@@ -471,9 +472,10 @@ span.an {
     position: relative;
     width:25vw;
     height:400px;
+    transform: translate(100px);
 }
 .cauze-poza-right:hover {
-    right:5vw;
+    margin-left:-5vw;
 }
 .cauze-poza-left:hover .cauze-poza-bg {
     opacity: 1;
