@@ -382,6 +382,13 @@ span.an {
     width:55vw;
     z-index:1;
 }
+.cauze-space {
+    position: relative;
+    width:100%;
+    height:3px;
+    margin:25px 0 15px 0;
+    background-color: transparent;
+}
 .cauze-text {
     color:white;
     font-size:14px;
@@ -398,7 +405,7 @@ span.an {
     width:calc(100% - 20px);
     position: relative;
     left:10px;
-    background-color: white;
+    background-color: grey;
     height:2px;
     top:10px;
 }
@@ -410,35 +417,35 @@ span.an {
     margin-top:10px;
     background-position: top;
     box-shadow: 3px 5px 5px black;
+    z-index:5;
 }
 .cauze-poza-left:nth-child(1) {
-    background-image: url(cauze/map.jpg);
-}
-.cauze-poza-left:nth-child(2) {
     background-image: url(cauze/otto-von.jpg);
 }
 .cauze-poza-left:nth-child(3) {
-    background-image: url(cauze/wilhelm.jpg);
-}
-.cauze-poza-right:nth-child(1) {
-    background-image:url(cauze/incoronare.jpg);
-}
-.cauze-poza-right:nth-child(2) {
     background-image: url(cauze/mitraliera.jpg);
 }
-.cauze-poza-right {
-    background-image: url(cauze/aliante.gif);
+.cauze-poza-right:nth-child(1) {
+    background-image: url(cauze/wilhelm.jpg);
+}
+.cauze-poza-right:nth-child(2) {
+    background-image:url(cauze/incoronare.jpg);
+}
+.cauze-poza-right:nth-child(3) {
+    background-image:url(cauze/tank.jpg);
 }
 .cauze-poza-bg {
     width:100%;
-    height:100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    height:100px;
     display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    opacity: 0;
+    position: absolute;
     transition: 400ms ease;
+    opacity: 0;
+    z-index:2;
 }
 .cauze-poza-text {
     font-size:20px;
@@ -457,8 +464,16 @@ span.an {
     position: relative;
     opacity: 0;
     transform: translateY(0px);
-    transition: 400ms ease;
     transition-delay: 0;
+    transition: 400ms ease;
+}
+.cauze-poza-left:hover,.cauze-poza-right:hover {
+    position: relative;
+    width:25vw;
+    height:400px;
+}
+.cauze-poza-right:hover {
+    right:5vw;
 }
 .cauze-poza-left:hover .cauze-poza-bg {
     opacity: 1;
@@ -541,7 +556,7 @@ span.an {
     opacity:0;
     transition: 400ms ease;
 }
-.reveal-text1, .reveal-text2, .reveal-text3 {
+.reveal-text1, .reveal-text2, .reveal-text3, .reveal-intro {
   visibility: hidden;
 }
 .line {
