@@ -32,10 +32,12 @@
   <div id="main" class="section">
     <div id="main-left">
       <div id="title">Primul Razboi Mondial<br><span class="an">1914-1918</span></div>
-      <div id="introducere-text">
-        <span class='reveal-intro'>
-          Primul razboi mondial sau Razboiul cel mare, a fost unul dintre cele mai importante conflicte la nivel global, care a provocat aproximativ 10 milioane de morti si 20 de milioane de raniti. A inceput in 1914 si s-a desfasurat pana in 1918. A fost unul dintre razboaiele cu cele mai multe decese care a provocat schimbari politice masive. Tarile care au participat la razboi s-au impartit in 2 tabere: Tripla alianta si Antanta. Tripla alianta era formata din Germania, Austro-Ungaria si Italia, iar Antanta din Rusia, Franta si Anglia. Pe parcursul razboiului au fost multe alte state care s-au alaturat acestor aliante.
-        </span>
+      <div id="introducere-text" className="tilt-anim" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-scale="1.05">
+        <div class="textZ">
+          <span class='reveal-intro'>
+            Primul razboi mondial sau Razboiul cel mare, a fost unul dintre cele mai importante conflicte la nivel global, care a provocat aproximativ 10 milioane de morti si 20 de milioane de raniti. A inceput in 1914 si s-a desfasurat pana in 1918. A fost unul dintre razboaiele cu cele mai multe decese care a provocat schimbari politice masive. Tarile care au participat la razboi s-au impartit in 2 tabere: Tripla alianta si Antanta. Tripla alianta era formata din Germania, Austro-Ungaria si Italia, iar Antanta din Rusia, Franta si Anglia. Pe parcursul razboiului au fost multe alte state care s-au alaturat acestor aliante.
+          </span>
+        </div>
         <div class="slideLeft"></div>
         <div class="slideBottom"></div>
         <div class="slideRight"></div>
@@ -219,5 +221,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js" integrity="sha512-m/n857VfrPYUcRvzCfqfrC9aMT06TQA2V0DcX/Ovovrhswa3038FfYmHlB0l/ZMukVyKWmiwZI4Pnnd7v3FwFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
   <script src="gsap.js"></script>
+  <script type="text/javascript" src="tilt.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelectorAll("tilt-anim"), {
+      max:25,
+      speed:400,
+    });
+  </script>
 </body>
 </html>
