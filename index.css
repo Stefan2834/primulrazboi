@@ -2,7 +2,6 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     overflow-x: visible;
 }
 html {
@@ -23,6 +22,10 @@ body {
     color:white;
     text-shadow:0px 0px 0px transparent;
 }
+
+/*----------Navbar----------*/
+
+
 #navBar {
     width:100vw;
     height:70px;
@@ -131,12 +134,13 @@ nav {
     top:50%;
     transform: translateY(-50%);
     overflow:hidden;
+    font-family: 'Poppins', sans-serif;
 }
 .background-text::selection {
     background-color: transparent;
 }
 .corner-bottom-left,.corner-bottom-right,.corner-top-left,.corner-top-right {
-    position: absolute;
+    position:absolute;
     z-index:-1;
 }
 .corner-top-left {
@@ -165,7 +169,6 @@ nav {
     border-bottom: 5px solid white;
     border-left:5px solid white;
     border-bottom-left-radius:  10px;
-    z-index:0;
 }
 .corner-bottom-right {
     bottom:0;
@@ -298,6 +301,7 @@ span.an {
     background-position: center;
     transform-style: preserve-3d;
     transform: perspective(1000px);
+    font-family:'Poppins', sans-serif ;
 }
 .textZ {
     transform: translateZ(30px);
@@ -411,16 +415,25 @@ span.an {
     background-color: transparent;
 }
 .cauze-text {
-    color:white;
+    color:rgb(203, 203, 203);
     font-size:14px;
     line-height: 18px;
     padding:10px;
     font-family:'Secular one', sans-serif ;
+    text-align: justify;
+}
+.cauze-font {
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    font-size:20px;
+    font-weight: 600;
 }
 .cauze-intro {
-    font-size:18px;
-    font-family:'Secular one', sans-serif ;
-    line-height: 18px;
+    font-size:20px;
+    color:white;
+    font-family:'Poppins', sans-serif ;
+    line-height: 24px;
+    font-weight: 600;
 }
 .line-text {
     width:calc(100% - 20px);
@@ -478,6 +491,7 @@ span.an {
     transform: translateY(0px);
     transition: 400ms ease;
     transition-delay: 0;
+    font-family: 'Poppins',sans-serif;
 }
 .cauze-poza-an {
     font-size:16px;
@@ -488,6 +502,7 @@ span.an {
     transform: translateY(0px);
     transition-delay: 0;
     transition: 400ms ease;
+    font-family: 'Poppins',sans-serif;
 }
 .cauze-poza-left:hover,.cauze-poza-right:hover {
     position: relative;
@@ -532,8 +547,102 @@ span.an {
 
 #inceputul {
     width:100vw;
-    height:1000px;
+    height:auto;
     background-color: var(--principal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:50px 0;
+}
+.inceputul-flex {
+    width:calc(100vw - 40px);
+    height:100%;
+    position: relative;
+    color:white;
+    font-family:'Secular one', sans-serif ;
+    font-size:14px;
+    text-align: justify;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+}
+span.inceput-font {
+    font-size:20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color:white;
+}
+.inceput-left {
+    width:20vw;
+}
+.inceput-right {
+    width:20vw;
+}
+.inceput-center {
+    width: calc(60vw - 20px);
+    margin:0 10px;
+    padding:5px 10px;
+    position: relative;
+    z-index:1;
+}
+.inceput-center{
+    color:rgb(203, 203, 203);
+}
+.inceput-left, .inceput-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+}
+.inceput-left-bg, .inceput-right-bg {
+    width:100%;
+    height:25%;
+    margin:5px 0;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index:2;
+}
+.inceput-bg1 {
+    background-image: url(inceputul/austro-ungaria.jpg);
+}
+.inceput-bg2 {
+    background-image:url(inceputul/asasinare.webp)
+}
+.inceput-bg3 {
+    background-image: url(inceputul/tablou.jpg);
+}
+.inceput-bg4 {
+    background-image: url(inceputul/batalie-mons.jpg);
+}
+.inceput-bg5 {
+   background-image: url(inceputul/ziar.png);
+}
+.inceput-bg6 {
+    background-image: url(inceputul/gavrilo-princip.jpg);
+}
+.inceput-bg7 {
+    background-color:red;
+}
+.inceput-bg8 {
+    background-image: url(inceputul/fotbal.jpg);
+}
+.inceput-left-name, .inceput-right-name {
+    opacity: 0;
+    width:100%;
+    height:25%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms ease;
+}
+.inceput-left-bg:hover .inceput-left-name, .inceput-right-bg:hover .inceput-right-name {
+    height:50px;
+    opacity: 1;
 }
 
 
@@ -568,6 +677,7 @@ span.an {
 #first-text, #second-text, #third-text {
     backdrop-filter: blur(4px);
     padding:10px;
+    font-family: 'Poppins',sans-serif;
     background-color: rgba(34, 34, 34, 0.5);
     top:350px;
     color:white;
@@ -624,6 +734,7 @@ span.an {
     opacity: 0;
     transition: 400ms;
     transform: translateY(-10px);
+    font-family: 'Poppins',sans-serif;
 }
 .first:hover #germania-nume, .second:hover #romania-nume, .third:hover #franta-nume{
     opacity:1;
@@ -699,6 +810,7 @@ span.an {
     line-height:35px;
     opacity:0;
     transition: 400ms ease;
+    font-family: 'Poppins',sans-serif;
 }
 .first:hover #first-more, .second:hover #second-more, .third:hover #third-more{
     opacity:1;
@@ -786,7 +898,7 @@ span.an {
 }
 
 
-/* Media queries */
+/*----------Media queries----------*/
 
 @media screen and (max-width:1000px) {
     #main {

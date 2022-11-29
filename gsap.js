@@ -193,7 +193,7 @@ function slide () {
     ScrollTrigger.create({
       trigger: moveUp,
       animation: animemoveUp,
-      toggleActions: 'play reset play reset',
+      toggleActions: 'play none none none',
       once: false,
     });
   });
