@@ -1,4 +1,4 @@
-window.onscroll = function () {scroll(), menuClose()};
+window.onscroll = function () {scroll()}
 window.onresize = function () {scroll()}
 
 function scroll() {    
@@ -181,10 +181,13 @@ function menuClose() {
     Menu = true;
     menu();
 }
+if(window.innerWidth < 1000) {
+    nav.addEventListener("click", function () {
+        menuClose();  
+    })
+    window.onscroll = function () {menuClose()};
+}
 
-nav.addEventListener("click", function () {
-    menuClose();  
-})
 
 
 var firstTitle = document.querySelector("#text-first-title")
@@ -209,7 +212,7 @@ function firstReveal () {
     main.style.left = '0';
     setTimeout(function () {
         firstTitle.style.opacity = '1';
-    },400)
+    },300)
     secondTitle.style.opacity = '0';
     thirdTitle.style.opacity = '0';
     fourthTitle.style.opacity = '0';
@@ -222,7 +225,7 @@ function secondReveal () {
     firstTitle.style.opacity = '0';
     setTimeout(function () {
         secondTitle.style.opacity = '1';
-    }, 400)
+    }, 300)
     thirdTitle.style.opacity = '0';
     fourthTitle.style.opacity = '0';
 }
@@ -233,7 +236,7 @@ function thirdReveal () {
     secondTitle.style.opacity = '0';
     setTimeout(function () {
         thirdTitle.style.opacity = '1';
-    }, 400)
+    }, 300)
     fourthTitle.style.opacity = '0';
 }
 
@@ -245,7 +248,7 @@ function fourthReveal () {
     thirdTitle.style.opacity = '0';
     setTimeout(function () {
         fourthTitle.style.opacity = '1';
-    },400)
+    }, 300)
 }
 firstReveal()
 
@@ -261,30 +264,3 @@ actionThird.addEventListener("click", () =>{
 actionFourth.addEventListener("click", () =>{
     fourthReveal()
 })
-
-// let x = 8000;
-// let set1,set2,set3,set
-
-
-// function timeout () {
-//     firstReveal()
-//     set1 = setTimeout(function () {
-//         firstReveal()
-//         setInterval(firstReveal, x * 4)
-//     }, x * 4)
-//     set2 = setTimeout(function () {
-//         secondReveal()
-//         setInterval(secondReveal,x * 4)
-//     }, x);
-//     set3 = setTimeout(function () {
-//         thirdReveal()
-//         setInterval(thirdReveal,x * 4)
-//     }, x * 2 );
-//     set4 = setTimeout(function () {
-//         fourthReveal()
-//         setInterval(fourthReveal,x * 4)
-//     }, x * 3)
-// }
-
-// timeout()
-
