@@ -185,3 +185,106 @@ function menuClose() {
 nav.addEventListener("click", function () {
     menuClose();  
 })
+
+
+var firstTitle = document.querySelector("#text-first-title")
+var secondTitle = document.querySelector("#text-second-title")
+var thirdTitle = document.querySelector("#text-third-title")
+var fourthTitle = document.querySelector("#text-fourth-title")
+var firstText = document.querySelector("#text-first-info");
+var secondText = document.querySelector("#text-second-info");
+var thirdText = document.querySelector("#text-third-info");
+var fourthText = document.querySelector("#text-fourth-info");
+var actionFirst = document.querySelector("#action-first");
+var actionSecond = document.querySelector("#action-second");
+var actionThird = document.querySelector("#action-third");
+var actionFourth = document.querySelector("#action-fourth");
+var actionIndicator = document.querySelector(".action-indicator")
+var main = document.getElementById("main-slide");
+
+
+
+function firstReveal () {
+    actionIndicator.style.transform = "translateY(0px)";
+    main.style.left = '0';
+    setTimeout(function () {
+        firstTitle.style.opacity = '1';
+    },400)
+    secondTitle.style.opacity = '0';
+    thirdTitle.style.opacity = '0';
+    fourthTitle.style.opacity = '0';
+
+}
+
+function secondReveal () {
+    actionIndicator.style.transform = "translateY(50px)";
+    main.style.left = '-100vw';
+    firstTitle.style.opacity = '0';
+    setTimeout(function () {
+        secondTitle.style.opacity = '1';
+    }, 400)
+    thirdTitle.style.opacity = '0';
+    fourthTitle.style.opacity = '0';
+}
+function thirdReveal () {
+    actionIndicator.style.transform = "translateY(100px)";
+    main.style.left = '-200vw';
+    firstTitle.style.opacity = '0';
+    secondTitle.style.opacity = '0';
+    setTimeout(function () {
+        thirdTitle.style.opacity = '1';
+    }, 400)
+    fourthTitle.style.opacity = '0';
+}
+
+function fourthReveal () {
+    actionIndicator.style.transform = "translateY(150px)";
+    main.style.left = '-300vw';
+    firstTitle.style.opacity = '0';
+    secondTitle.style.opacity = '0';
+    thirdTitle.style.opacity = '0';
+    setTimeout(function () {
+        fourthTitle.style.opacity = '1';
+    },400)
+}
+firstReveal()
+
+actionFirst.addEventListener("click",() =>  {
+    firstReveal()
+})
+actionSecond.addEventListener("click", () =>{
+    secondReveal()
+})
+actionThird.addEventListener("click", () =>{
+    thirdReveal()
+})
+actionFourth.addEventListener("click", () =>{
+    fourthReveal()
+})
+
+// let x = 8000;
+// let set1,set2,set3,set
+
+
+// function timeout () {
+//     firstReveal()
+//     set1 = setTimeout(function () {
+//         firstReveal()
+//         setInterval(firstReveal, x * 4)
+//     }, x * 4)
+//     set2 = setTimeout(function () {
+//         secondReveal()
+//         setInterval(secondReveal,x * 4)
+//     }, x);
+//     set3 = setTimeout(function () {
+//         thirdReveal()
+//         setInterval(thirdReveal,x * 4)
+//     }, x * 2 );
+//     set4 = setTimeout(function () {
+//         fourthReveal()
+//         setInterval(fourthReveal,x * 4)
+//     }, x * 3)
+// }
+
+// timeout()
+

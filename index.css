@@ -236,22 +236,6 @@ nav {
 
 /*----------Main----------*/
 
-
-
-#main {
-    width:100vw;
-    background-color:rgba(0, 0, 0, 0.4);
-    background-blend-mode:soft-light;
-    background-image: url(images/bg.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    height:auto;
-    justify-content: space-around;
-    align-items:center;
-    flex-direction: row;
-}
 #main-left, #main-right {
     height:100%;
     position: relative; 
@@ -265,7 +249,7 @@ nav {
     width:60vw;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
 }
 #title {
@@ -307,8 +291,66 @@ span.an {
     transform: perspective(1000px);
     font-family:'Poppins', sans-serif ;
 }
+#main-slide {
+  position: relative;
+  width:400vw;
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 600ms ease;
+}
+#main-bg-slide {
+  width:100vw;
+  height:100vh;
+  position: relative;
+}
+.first-slide, .second-slide, .third-slide, .fourth-slide {
+  width:100vw;
+  height:100vh;
+  background-size: cover;
+  background-position: center;
+}
+.first-slide {
+    background-color:rgba(0, 0, 0, 0.4);
+    background-blend-mode:soft-light;
+    background-image: url(images/bg.jpg);
+}
+.second-slide {
+  background-color: black;
+}
+.third-slide {
+  background-color: blue;
+}
+.fourth-slide {
+  background-color: blueviolet;
+}
+.text-intro{
+  position: absolute;
+  color:white;
+  font-size:30px;
+  text-align: center;
+  z-index:10;
+  transition: 600ms ease;
+  cursor:default;
+  left:100px;
+  top:100px;
+}
+#text-first-title {
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#text-second-title, #text-third-title, #text-fourth-title {
+    opacity: 0;
+}
 .textZ {
     transform: translateZ(30px);
+    font-size:16px;
 }
 #protect {
     width:100%;
@@ -380,6 +422,52 @@ span.an {
 }
 .video::selection {
     background-color: transparent;
+}
+#action {
+    position:absolute;
+    width:80px;
+    height:200px;
+    right:60px;
+    bottom:100px;
+    z-index:11;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.action-btn {
+    width:100%;
+    height:50px;
+    cursor: pointer;
+    border:none;
+    font-size:30px;
+    color:white;
+    font-family: 'Poppins',sans-serif;
+    padding:0 10px;
+    background-color: transparent;
+    cursor:pointer;
+}
+.action-btn:nth-child(1), .action-btn:nth-child(3) {
+    text-align: left;
+}
+.action-btn:nth-child(2), .action-btn:nth-child(4) {
+    text-align: right;
+}
+.action-line {
+    width:3px;
+    height:100%;
+    background-color: rgba(165, 165, 165, 0.765);
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+}
+.action-indicator {
+    width:100%;
+    height:50px;
+    background-color: white;
+    position: relative;
+    top:0;
+    transition:600ms ease;
 }
 
 
@@ -964,10 +1052,6 @@ span.transee-font {
 /*----------Media queries----------*/
 
 @media screen and (max-width:1000px) {
-    #main {
-        flex-direction: column;
-        padding-bottom: 50px;
-    }
     #main-left {
         width:calc(100vw - 10px);
     }
