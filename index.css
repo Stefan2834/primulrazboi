@@ -217,6 +217,10 @@ nav {
     left:50px;
     width:180px;
 }
+#white-transee {
+    right:50px;
+    width:390px;
+}
 .white-line {
     position: absolute;
     top:50%;
@@ -651,13 +655,13 @@ span.inceput-font {
 .inceput-video {
     width:560px;
     height:315px;
-    background-color: red;
     position: relative;
     left:50%;
     transform: translate(-50%);
     bottom:-100px;
     box-shadow:4px 4px 7px black;
 }
+
     
 
 
@@ -910,6 +914,50 @@ span.inceput-font {
 }
 #third-text:hover .slideBottom {
     right:calc(100% - 105px);
+}
+
+
+/*----------Transee----------*/
+
+
+#transee {
+    width:100vw;
+    height:auto;
+    background-color: var(--principal);
+    padding:50px 0;
+}
+.transee-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width:calc(100vw - 50px);
+    position: relative;
+    height:100%;
+    left:10px;
+    flex-direction: row;
+}
+.transee-center {
+    width:60%;
+    height:100%;
+    color:rgb(203, 203, 203);
+    font-family: 'Secular one',sans-serif;
+    text-align: justify;
+    font-size:14px;
+    padding:10px;
+}
+span.transee-font {
+    font-size:20px;
+    color:white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+}
+.transee-left, .transee-right {
+    width:20%;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
