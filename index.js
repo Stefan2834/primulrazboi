@@ -194,10 +194,6 @@ var firstTitle = document.querySelector("#text-first-title")
 var secondTitle = document.querySelector("#text-second-title")
 var thirdTitle = document.querySelector("#text-third-title")
 var fourthTitle = document.querySelector("#text-fourth-title")
-var firstText = document.querySelector("#text-first-info");
-var secondText = document.querySelector("#text-second-info");
-var thirdText = document.querySelector("#text-third-info");
-var fourthText = document.querySelector("#text-fourth-info");
 var actionFirst = document.querySelector("#action-first");
 var actionSecond = document.querySelector("#action-second");
 var actionThird = document.querySelector("#action-third");
@@ -207,7 +203,7 @@ var main = document.getElementById("main-slide");
 
 
 
-function firstReveal () {
+function firstRevealMain () {
     actionIndicator.style.transform = "translateY(0px)";
     main.style.left = '0';
     setTimeout(function () {
@@ -223,7 +219,7 @@ function firstReveal () {
 
 }
 
-function secondReveal () {
+function secondRevealMain () {
     actionIndicator.style.transform = "translateY(50px)";
     main.style.left = '-100vw';
     firstTitle.style.opacity = '0';
@@ -237,7 +233,7 @@ function secondReveal () {
     thirdTitle.style.opacity = '0';
     fourthTitle.style.opacity = '0';
 }
-function thirdReveal () {
+function thirdRevealMain () {
     actionIndicator.style.transform = "translateY(100px)";
     main.style.left = '-200vw';
     firstTitle.style.opacity = '0';
@@ -252,7 +248,7 @@ function thirdReveal () {
     fourthTitle.style.opacity = '0';
 }
 
-function fourthReveal () {
+function fourthRevealMain () {
     actionIndicator.style.transform = "translateY(150px)";
     main.style.left = '-300vw';
     firstTitle.style.opacity = '0';
@@ -266,17 +262,17 @@ function fourthReveal () {
         fourthTitle.style.zIndex = '10';
     }, 300)
 }
-firstReveal()
+firstRevealMain()
 
 actionFirst.addEventListener("click",() =>  {
-    firstReveal()
+    firstRevealMain()
 })
 actionSecond.addEventListener("click", () =>{
-    secondReveal()
+    secondRevealMain()
 })
 actionThird.addEventListener("click", () =>{
-    thirdReveal()
+    thirdRevealMain()
 })
 actionFourth.addEventListener("click", () =>{
-    fourthReveal()
+    fourthRevealMain()
 })

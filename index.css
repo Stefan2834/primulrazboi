@@ -303,10 +303,8 @@ span.an {
     justify-content: space-around;
 }
 #text-second-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    left:0;
+    width:100vw;
     position: absolute;
     height:80%
 }
@@ -392,7 +390,7 @@ span.an {
     position:absolute;
     width:80px;
     height:200px;
-    right:60px;
+    right:1vw;
     bottom:100px;
     z-index:11;
     display: flex;
@@ -434,6 +432,13 @@ span.an {
     top:0;
     transition:600ms ease;
 }
+.main-transee-flex {
+    display: flex;
+    width:100vw;
+    height:100%;
+    align-items: center;
+    justify-content: space-around;
+}
 .main-transee-flex-left {
   width:30vw;
   z-index:11;
@@ -473,6 +478,7 @@ span.an {
     padding:5px 12px;
     background: var(--gradient);
     border-radius:30px;
+    box-shadow:0 0 4px black;
 }
 .main-transee-more {
     position: relative;
@@ -483,6 +489,9 @@ span.an {
     font-family: 'Poppins',sans-serif;
     color:white;
     text-align: center;
+}
+.main-transee-video {
+    box-shadow:0 0 4px black;
 }
 
 /*----------Cauzele----------*/
