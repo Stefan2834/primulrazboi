@@ -212,6 +212,10 @@ function firstReveal () {
     main.style.left = '0';
     setTimeout(function () {
         firstTitle.style.opacity = '1';
+        firstTitle.style.zIndex = '10';
+        secondTitle.style.zIndex = '5';
+        thirdTitle.style.zIndex = '5';
+        fourthTitle.style.zIndex = '5';
     },300)
     secondTitle.style.opacity = '0';
     thirdTitle.style.opacity = '0';
@@ -225,6 +229,10 @@ function secondReveal () {
     firstTitle.style.opacity = '0';
     setTimeout(function () {
         secondTitle.style.opacity = '1';
+        firstTitle.style.zIndex = '5';
+        secondTitle.style.zIndex = '10';
+        thirdTitle.style.zIndex = '5';
+        fourthTitle.style.zIndex = '5';
     }, 300)
     thirdTitle.style.opacity = '0';
     fourthTitle.style.opacity = '0';
@@ -236,6 +244,10 @@ function thirdReveal () {
     secondTitle.style.opacity = '0';
     setTimeout(function () {
         thirdTitle.style.opacity = '1';
+        firstTitle.style.zIndex = '5';
+        secondTitle.style.zIndex = '5';
+        thirdTitle.style.zIndex = '10';
+        fourthTitle.style.zIndex = '5';
     }, 300)
     fourthTitle.style.opacity = '0';
 }
@@ -248,6 +260,10 @@ function fourthReveal () {
     thirdTitle.style.opacity = '0';
     setTimeout(function () {
         fourthTitle.style.opacity = '1';
+        firstTitle.style.zIndex = '5';
+        secondTitle.style.zIndex = '5';
+        thirdTitle.style.zIndex = '5';
+        fourthTitle.style.zIndex = '10';
     }, 300)
 }
 firstReveal()
