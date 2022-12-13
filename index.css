@@ -251,11 +251,13 @@ span.an {
   align-items: center;
   justify-content: center;
   transition: 600ms ease;
+  overflow:hidden;
 }
 #main-bg-slide {
   width:100vw;
   height:100vh;
   position: relative;
+  overflow:hidden;
 }
 .first-slide, .second-slide, .third-slide, .fourth-slide {
   width:100vw;
