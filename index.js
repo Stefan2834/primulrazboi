@@ -276,3 +276,54 @@ actionThird.addEventListener("click", () =>{
 actionFourth.addEventListener("click", () =>{
     fourthRevealMain()
 })
+
+const bataliiLeft = document.querySelector(".batalii-left-move");
+const bataliiRight = document.querySelector(".batalii-right-move");
+const bataliiSlide = document.querySelector('.batalii-slide');
+const verdun = document.querySelector("#batalii-verdun");
+const somme = document.querySelector("#batalii-somme");
+const ypres = document.querySelector("#batalii-ypres");
+var x = 0;
+
+bataliiLeft.addEventListener("click", () => {
+    x += 100;
+    if(x > 0) {
+        x = -200
+    }
+    bataliiSlide.style.transform = 'translateX(' + x + 'vw)'; 
+    bataliiOpacity()
+})
+
+bataliiRight.addEventListener("click", () => {
+    x -= 100;
+    if(x < -200) {
+        x = 0;
+    }
+    bataliiSlide.style.transform = 'translateX(' + x + 'vw)'; 
+    bataliiOpacity()
+})
+
+function bataliiOpacity () {
+    if(x === 0) {
+        verdun.style.opacity = '1';
+        verdun.style.zIndex = '10';
+        somme.style.opacity = '0';
+        somme.style.zIndex = '9';
+        ypres.style.opacity = '0';
+        ypres.style.zIndex = '9';
+    } else if (x === -100) {
+        verdun.style.opacity = '0';
+        verdun.style.zIndex = '9';
+        somme.style.opacity = '1';
+        somme.style.zIndex = '10';
+        ypres.style.opacity = '0';
+        ypres.style.zIndex = '9';
+    } else if(x === -200) {
+        verdun.style.opacity = '0';
+        verdun.style.zIndex = '9';
+        somme.style.opacity = '0';
+        somme.style.zIndex = '9';
+        ypres.style.opacity = '1';
+        ypres.style.zIndex = '10';
+    }
+}
