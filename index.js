@@ -204,7 +204,7 @@ var main = document.getElementById("main-slide");
 
 
 function firstRevealMain () {
-    actionIndicator.style.transform = "translateY(0px)";
+    actionIndicator.style.transform = "translateX(0px)";
     main.style.left = '0';
     setTimeout(function () {
         firstTitle.style.opacity = '1';
@@ -220,7 +220,7 @@ function firstRevealMain () {
 }
 
 function secondRevealMain () {
-    actionIndicator.style.transform = "translateY(50px)";
+    actionIndicator.style.transform = "translateX(50px)";
     main.style.left = '-100vw';
     firstTitle.style.opacity = '0';
     setTimeout(function () {
@@ -234,7 +234,7 @@ function secondRevealMain () {
     fourthTitle.style.opacity = '0';
 }
 function thirdRevealMain () {
-    actionIndicator.style.transform = "translateY(100px)";
+    actionIndicator.style.transform = "translateX(100px)";
     main.style.left = '-200vw';
     firstTitle.style.opacity = '0';
     secondTitle.style.opacity = '0';
@@ -249,7 +249,7 @@ function thirdRevealMain () {
 }
 
 function fourthRevealMain () {
-    actionIndicator.style.transform = "translateY(150px)";
+    actionIndicator.style.transform = "translateX(150px)";
     main.style.left = '-300vw';
     firstTitle.style.opacity = '0';
     secondTitle.style.opacity = '0';
