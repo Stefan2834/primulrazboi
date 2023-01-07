@@ -570,11 +570,17 @@ span.an {
     box-shadow: 3px 5px 5px black;
     transition:400ms ease-out;
     z-index:5;
-    background-color: rgba(0, 0, 0, 0.3);
+    transition:400ms ease-out;
     background-blend-mode: darken;
+}
+.cauze-poza-left:hover , .cauze-poza-right:hover {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .cauze-poza-left:nth-child(1) {
     background-image: url(cauze/otto-von.jpg);
+}
+.cauze-poza-left:nth-child(2) {
+    background-color: red;
 }
 .cauze-poza-left:nth-child(3) {
     background-image: url(cauze/mitraliera.jpg);
@@ -659,6 +665,7 @@ span.an {
     height:auto;
     background-color: var(--principal);
     padding:50px 0 200px 0;
+    position: relative;
 }
 .inceputul-flex {
     width:calc(100vw - 40px);
@@ -702,7 +709,7 @@ span.inceput-font {
     flex-direction: column;
     position: relative;
 }
-.inceput-left-bg, .inceput-right-bg {
+.inceput-left-bg, .inceput-right-bg, .transee-left-bg, .transee-right-bg {
     width:100%;
     height:25%;
     margin:5px 0;
@@ -711,8 +718,8 @@ span.inceput-font {
     background-repeat: no-repeat;
     z-index:2;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: darken;
+    transition:400ms ease-out;
 }
 .inceput-bg1 {
     background-image: url(inceputul/austro-ungaria.jpg);
@@ -741,7 +748,8 @@ span.inceput-font {
 .inceput-left-name, .inceput-right-name {
     opacity: 0;
     width:calc(100% - 10px);
-    height:70px;
+    height:auto;
+    padding:0 10px;
     position: absolute;
     top:0;
     display: flex;
@@ -759,6 +767,9 @@ span.inceput-font {
     opacity: 1;
     translate: 0px 0px;
     transition-delay: 400ms;
+}
+.inceput-left-bg:hover, .inceput-right-bg:hover {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .inceput-video {
     width:560px;
@@ -1033,6 +1044,7 @@ span.inceput-font {
     height:auto;
     background-color: var(--principal);
     padding:50px 0;
+    position: relative;
 }
 .transee-flex {
     display: flex;
@@ -1066,6 +1078,32 @@ span.transee-font {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-direction: column;
+    color:white;
+}
+.transee-left-bg1 {
+    background-image: url(transee/Picture1.png);
+}
+.transee-left-bg2 {
+    background-image: url(transee/Picture3.png);
+}
+.transee-left-bg3 {
+    background-image: url(transee/Picture5.png);
+}
+.transee-left-bg4 {
+    background-image: url(transee/Picture7.png);
+}
+.transee-right-bg1 {
+    background-image: url(transee/Picture2.png);
+}
+.transee-right-bg2 {
+    background-image: url(transee/Picture4.png);
+}
+.transee-right-bg3 {
+    background-image: url(transee/Picture6.png);
+}
+.transee-right-bg4 {
+    background-image: url(transee/Picture8.png);
 }
 
 
