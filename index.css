@@ -177,6 +177,10 @@ nav {
     left:50px;
     width:360px;
 }
+#white-armament {
+    right:50px;
+    width:250px;
+}
 .white-line {
     position: absolute;
     top:50%;
@@ -757,7 +761,7 @@ span.inceput-font {
     margin:5px;
     text-align: center;
 }
-.inceput-left-bg:hover .inceput-left-name, .inceput-right-bg:hover .inceput-right-name {
+.inceput-left-bg:hover .inceput-left-name, .inceput-right-bg:hover .inceput-right-name{
     opacity: 1;
     translate: 0px 0px;
     transition-delay: 400ms;
@@ -1218,6 +1222,41 @@ span.transee-font {
 }
 #batalii-verdun, #batalii-somme, #batalii-ypres {
     transition: 800ms ease;
+}
+
+/*----------Armament----------*/
+
+#armament {
+    width:100vw;
+    height:auto;
+    background-color: var(--principal);
+    padding:50px 0;
+    position: relative;
+}
+.armament-left-bg1 {
+    background-image: url(armament/tank.jpg);
+}
+.armament-left-bg2 {
+    background-image: url(armament/avion.jpg);
+}
+.armament-left-bg3 {
+    background-image:url(armament/zepelin.webp)
+}
+.armament-left-bg4 {
+    background-image: url(armament/gaz-cal.png)
+}
+.armament-right-bg1 {
+    background-image: url(armament/tank2.jpg);
+    background-position:right;
+}
+.armament-right-bg2 {
+    background-image: url(armament/tablou.png);
+}
+.armament-right-bg3 {
+    background-image: url(armament/zepelin2.jpg);
+}
+.armament-right-bg4 {
+    background-image: url(armament/flacari.png);
 }
 
 
