@@ -355,11 +355,11 @@ var options = {
   },
   xaxis: {
     categories: [
-      ['Html5'],
-      ['Css5'],
-      ['JavaScript'],
-      ['Jquery'],
-      ['OtherJs', 'Libraries'],
+      ['Germania'],
+      ['Anglia'],
+      ['Franta'],
+      ['Austro-Ungria'],
+      ['Rusia'],
     ],
     labels: {
       style: {
