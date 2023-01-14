@@ -637,6 +637,9 @@ span.an {
 .cauze-poza-right:nth-child(3) {
     background-image:url(cauze/tank.jpg);
 }
+.poza-select {
+    cursor: pointer;
+}
 .cauze-poza-bg {
     width:100%;
     height:100px;
