@@ -328,6 +328,23 @@ function bataliiOpacity () {
     }
 }
 
+var photoExit = document.getElementById("photo-exit");
+var photo = document.getElementById("photo");
+var photoMenu = document.getElementById("photo-menu");
+var pozaSelect = document.querySelectorAll(".poza-select");
+
+photoExit.addEventListener("click", () => {
+    photoMenu.style.display = 'none'
+})
+
+pozaSelect.forEach(pozaSelect => {
+    pozaSelect.addEventListener("click", function () {
+        let url = window.getComputedStyle(pozaSelect).backgroundImage
+        photo.style.backgroundImage = url;
+        photoMenu.style.display = 'flex'
+    })
+})
+
 
 var options = {
     series: [{

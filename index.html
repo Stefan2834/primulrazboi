@@ -14,6 +14,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Noto+Sans+Georgian:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=Quantico:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="photo-menu">
+    <div id="photo"></div>
+    <div id="photo-exit">X</div>
+  </div>
   <div id="navBar">
     <div id="menu">
       <div id="barTop"></div>
@@ -110,7 +114,7 @@
           <div class="main-transee-flex-left">
             <div class="main-transee-title">Consecințe</div>
             <div class="main-transee-text">
-              Armistițiul de la 11 noiembrie a pus capăt celor patru ani de război. Soldatul canadian George Price a fost considerat ultima victimă britanică, el fiind împușcat de un lunetist la 10.58.
+              Armistițiul de la 11 noiembrie a pus capăt celor patru ani de război. Soldatul canadian George Price a fost considerat ultima victimă, el fiind împușcat de un lunetist la 10.58.
             </div>
             <div class='main-transee-more'><a href="#white-consecinte">Mai multe</a></div>
           </div>
@@ -145,19 +149,19 @@
     <div class="background-text">Cauzele</div>
     <div id='cauze-flex'>
       <div id="cauze-left">
-        <div class="cauze-poza-left moveLeft">
+        <div class="cauze-poza-left moveLeft poza-select">
           <div class="cauze-poza-bg">
             <div class="cauze-poza-text">Otto von Bismarck</div>
             <div class="cauze-poza-an">Cancelarul Prusiei</div>
           </div>
         </div>
-        <div class="cauze-poza-left moveLeft">
+        <div class="cauze-poza-left moveLeft poza-select">
           <div class="cauze-poza-bg">
             <div class="cauze-poza-text">Otto von Bismarck</div>
             <div class="cauze-poza-an">Cancelarul Prusiei</div>
           </div>
         </div>
-        <div class="cauze-poza-left moveLeft">
+        <div class="cauze-poza-left moveLeft poza-select">
           <div class="cauze-poza-bg">
             <div class="cauze-poza-text">Mitraliera Maxim</div>
             <div class="cauze-poza-an">1884</div>
@@ -187,19 +191,19 @@
         </div>
       </div>
       <div id="cauze-right">
-        <div class="cauze-poza-right moveRight">
+        <div class="cauze-poza-right moveRight poza-select">
           <div class="cauze-poza-bg">
             <div class="cauze-poza-text">Wilhelm al II-lea</div>
             <div class="cauze-poza-an">Împărat al Germaniei</div>
           </div>
         </div>
-        <div class="cauze-poza-right moveRight">
+        <div class="cauze-poza-right moveRight poza-select">
           <div class="cauze-poza-bg">
             <div class="cauze-poza-text">Încoronarea lui Wilhelm I</div>
             <div class="cauze-poza-an">1971</div>
           </div>
         </div>
-        <div class="cauze-poza-right moveRight">
+        <div class="cauze-poza-right moveRight poza-select">
           <div class="cauze-poza-bg">
             <div class="cauze-poza-text">Tankul Mark I</div>
             <div class="cauze-poza-an"></div>
@@ -220,16 +224,16 @@
     <div class="background-text">Începutul</div>
     <div class="inceputul-flex">
       <div class="inceput-left">
-        <div class="inceput-left-bg inceput-bg1 moveLeft">
+        <div class="inceput-left-bg inceput-bg1 moveLeft poza-select">
           <div class="inceput-left-name">Austro-Ungaria</div>
         </div>
-        <div class="inceput-left-bg inceput-bg2 moveLeft">
+        <div class="inceput-left-bg inceput-bg2 moveLeft poza-select">
           <div class="inceput-left-name">Asasinarea de la Sarajevo</div>
         </div>
-        <div class="inceput-left-bg inceput-bg3 moveLeft">
+        <div class="inceput-left-bg inceput-bg3 moveLeft poza-select">
           <div class="inceput-left-name">Tabloul lui Friedrich August von Kaulbach</div>
         </div>
-        <div class="inceput-left-bg inceput-bg4 moveLeft">
+        <div class="inceput-left-bg inceput-bg4 moveLeft poza-select">
           <div class="inceput-left-name"></div>
         </div>
       </div>
@@ -265,16 +269,16 @@
       </div>
     </div>
     <div class="inceput-right">
-      <div class="inceput-right-bg inceput-bg5 moveRight">
+      <div class="inceput-right-bg inceput-bg5 moveRight poza-select">
         <div class="inceput-right-name">Ziarul cu știrea despre asasinare</div>
       </div>
-      <div class="inceput-right-bg inceput-bg6 moveRight">
+      <div class="inceput-right-bg inceput-bg6 moveRight poza-select">
         <div class="inceput-right-name">Gavrilo Princip</div>
       </div>
-      <div class="inceput-right-bg inceput-bg7 moveRight">
+      <div class="inceput-right-bg inceput-bg7 moveRight poza-select">
         <div class="inceput-right-name"></div>
       </div>
-      <div class="inceput-right-bg inceput-bg8 moveRight">
+      <div class="inceput-right-bg inceput-bg8 moveRight poza-select">
         <div class="inceput-right-name">Soldații jucând fotbal de crăciun in 1914</div>
       </div>
     </div>
@@ -371,10 +375,12 @@
     <div class="background-text">Tranșee</div>
     <div class="transee-flex">
       <div class="transee-left">
-        <div class="transee-left-bg transee-left-bg1 moveLeft"></div>
-        <div class="transee-left-bg transee-left-bg2 moveLeft"></div>
-        <div class="transee-left-bg transee-left-bg3 moveLeft"></div>
-        <div class="transee-left-bg transee-left-bg4 moveLeft"></div>
+        <div class="transee-left-bg moveLeft poza-select">
+          <img src='./transee/Picture1.png'>
+        </div>
+        <div class="transee-left-bg transee-left-bg2 moveLeft poza-select"></div>
+        <div class="transee-left-bg transee-left-bg3 moveLeft poza-select"></div>
+        <div class="transee-left-bg transee-left-bg4 moveLeft poza-select"></div>
       </div>
         <div class="transee-center">
           <div class="moveUp"><span class='transee-font'>Tranșeele</span></div>
@@ -390,10 +396,10 @@
           - cuțit de tranșee, baionete, ghioagă de lemn sau metalică, pistol de semnalizare, lopată, clește pentru sârmă, grenadă de mână, periscop<br><br></div>
       </div>
       <div class="transee-right">
-        <div class="transee-right-bg transee-right-bg1 moveRight"></div>
-        <div class="transee-right-bg transee-right-bg2 moveRight"></div>
-        <div class="transee-right-bg transee-right-bg3 moveRight"></div>
-        <div class="transee-right-bg transee-right-bg4 moveRight"></div>
+        <div class="transee-right-bg transee-right-bg1 moveRight poza-select"></div>
+        <div class="transee-right-bg transee-right-bg2 moveRight poza-select"></div>
+        <div class="transee-right-bg transee-right-bg3 moveRight poza-select"></div>
+        <div class="transee-right-bg transee-right-bg4 moveRight poza-select"></div>
       </div>
     </div>
   </div>
@@ -451,16 +457,16 @@
     <div class="background-text">Armamentul</div>
     <div class="transee-flex">
       <div class="transee-left">
-        <div class="inceput-left-bg armament-left-bg1 moveLeft">
+        <div class="inceput-left-bg armament-left-bg1 moveLeft poza-select">
           <div class='inceput-left-name'>Tanc</div>
         </div>
-        <div class="inceput-left-bg armament-left-bg2 moveLeft">
+        <div class="inceput-left-bg armament-left-bg2 moveLeft poza-select">
           <div class='inceput-left-name'>Avion de lupta</div>
         </div>
-        <div class="inceput-left-bg armament-left-bg3 moveLeft">
+        <div class="inceput-left-bg armament-left-bg3 moveLeft poza-select">
           <div class='inceput-left-name'>Zeppelinul ars în dezastrul de la hindenburg</div>
         </div>
-        <div class="inceput-left-bg armament-left-bg4 moveLeft">
+        <div class="inceput-left-bg armament-left-bg4 moveLeft poza-select">
           <div class='inceput-left-name'>Soldat si calul său purtând masca de gaze</div>
         </div>
       </div>
@@ -486,16 +492,16 @@
           <div class="moveUp">Armata germană adoptase aruncătoarele de flăcări încă din 1911. Acestea variau de la dispozitive mari și statice la aparate purtate în spate. Folosite pentru prima dată de germani împotriva britanicilor în Flandra, în iulie 1915, au intrat în echipamentul standard al trupelor de asalt. Acestea variau ca dimensiune. Aveau un efect psihologic impresionant.<br><br></div>
         </div>
       <div class="transee-right">
-        <div class="inceput-right-bg armament-right-bg1 moveRight">
+        <div class="inceput-right-bg armament-right-bg1 moveRight poza-select">
           <div class="inceput-right-name">Tanc</div>
         </div>
-        <div class="inceput-right-bg armament-right-bg2 moveRight">
+        <div class="inceput-right-bg armament-right-bg2 moveRight poza-select">
           <div class="inceput-right-name">Tabloul care reprezintă prăbușirea primului dirijabil german</div>
         </div>
-        <div class="inceput-right-bg armament-right-bg3 moveRight">
+        <div class="inceput-right-bg armament-right-bg3 moveRight poza-select">
           <div class="inceput-right-name">Zeppelin în flăcări</div>
         </div>
-        <div class="inceput-right-bg armament-right-bg4 moveRight">
+        <div class="inceput-right-bg armament-right-bg4 moveRight poza-select">
           <div class="inceput-right-name">Aruncător de flăcări</div>
         </div>
       </div>
@@ -511,13 +517,13 @@
     <div class="background-text">Război total</div>
     <div class="transee-flex">
       <div class="transee-left">
-        <div class="total-left-bg total-left-bg1 moveLeft">
+        <div class="total-left-bg total-left-bg1 moveLeft poza-select">
           <div class='inceput-left-name'>Femeie in fabrică</div>
         </div>
-        <div class="total-left-bg total-left-bg2 moveLeft">
+        <div class="total-left-bg total-left-bg2 moveLeft poza-select">
           <div class='inceput-left-name'>Ziar de propagandă</div>
         </div>
-        <div class="total-left-bg total-left-bg3 moveLeft">
+        <div class="total-left-bg total-left-bg3 moveLeft poza-select">
           <div class='inceput-left-name'>Oameni stând la coada</div>
         </div>
       </div>
@@ -536,13 +542,13 @@
           <div class='moveUp'>Printr-o situație destul de gravă  trecea și Imperiul Rus, unde femeile, în lipsa bărbaților plecați pe front, trăgeau la plug pentru a ara pământul. Nemulțumirile sociale din Imperiul Rus au determinat revoluția din februarie 1917, urmată de ieșirea Rusiei din război. Chiar dacă erau slăbite după anii de conflict, celelalte puteri au continuat lupta, iar în 1917 a fost rândul Statelor Unite să se alăture Antantei.<br><br></div>
        </div>
       <div class="transee-right">
-        <div class="total-right-bg total-right-bg1 moveRight">
+        <div class="total-right-bg total-right-bg1 moveRight poza-select">
           <div class="inceput-right-name">Femeie in fabrică</div>
         </div>
-        <div class="total-right-bg total-right-bg2 moveRight">
+        <div class="total-right-bg total-right-bg2 moveRight poza-select">
           <div class="inceput-right-name">Ziar de propagandă</div>
         </div>
-        <div class="total-right-bg total-right-bg3 moveRight">
+        <div class="total-right-bg total-right-bg3 moveRight poza-select">
           <div class="inceput-right-name">Oameni stând la coada</div>
         </div>
       </div>
@@ -558,16 +564,16 @@
     <div class="background-text">Consecințe</div>
     <div class="transee-flex">
       <div class="transee-left">
-        <div class="inceput-left-bg consecinte-left-bg1 moveLeft">
+        <div class="inceput-left-bg consecinte-left-bg1 moveLeft poza-select">
           <div class='inceput-left-name'>Europa în 1914</div>
         </div>
-        <div class="inceput-left-bg consecinte-left-bg2 moveLeft">
+        <div class="inceput-left-bg consecinte-left-bg2 moveLeft poza-select">
           <div class='inceput-left-name'>Ziar despre pace</div>
         </div>
-        <div class="inceput-left-bg consecinte-left-bg3 moveLeft">
+        <div class="inceput-left-bg consecinte-left-bg3 moveLeft poza-select">
           <div class='inceput-left-name'>Varennes, Franța</div>
         </div>
-        <div class="inceput-left-bg consecinte-left-bg4 moveLeft">
+        <div class="inceput-left-bg consecinte-left-bg4 moveLeft poza-select">
           <div class='inceput-left-name'>Tablout - "Gassed"</div>
         </div>
       </div>
@@ -588,16 +594,16 @@
           <div class="moveUp">În Ziua Comemorării din 1920, britanicii au ținut funeralii naționale în catedrala Westminster pentru un Soldat Necunoscut, înmormântând un soldat ales la întâmplare dintre cei pieriți pe câmpul de luptă. Francezii au ținut o ceremonie asemănătoare la Arc de Triomphe din Paris, iar SUA le-au urmat exemplul în 1921. Soldatul Necunoscut îi reprezenta pe toți cei care își pierduseră viața, indiferent de gradul lor militar. Zeci de mii de plăci și monumente comemorative au fost ridicate, de obicei enumerându-i pe cei căzuți în ordine alfabetică.<br><br></div>
         </div>
       <div class="transee-right">
-        <div class="inceput-right-bg consecinte-right-bg1 moveRight">
+        <div class="inceput-right-bg consecinte-right-bg1 moveRight poza-select" id='poza123'>
           <div class="inceput-right-name">Europa în 1918</div>
         </div>
-        <div class="inceput-right-bg consecinte-right-bg2 moveRight">
+        <div class="inceput-right-bg consecinte-right-bg2 moveRight poza-select">
           <div class="inceput-right-name">Semnarea păcii din 11 noiembrie</div>
         </div>
-        <div class="inceput-right-bg consecinte-right-bg3 moveRight">
+        <div class="inceput-right-bg consecinte-right-bg3 moveRight poza-select">
           <div class="inceput-right-name">Leuven, Belgia</div>
         </div>
-        <div class="inceput-right-bg consecinte-right-bg4 moveRight">
+        <div class="inceput-right-bg consecinte-right-bg4 moveRight poza-select">
           <div class="inceput-right-name">Tablou - "Drumul gloriei"</div>
         </div>
       </div>

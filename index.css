@@ -23,6 +23,39 @@ body {
     text-shadow:0px 0px 0px transparent;
 }
 
+#photo-menu {
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    z-index:201;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#photo-exit {
+    width:50px;
+    height:50px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size:36px;
+    color:white;
+    display: flex;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    right:20px;
+    align-self: flex-start;
+    z-index:200;
+}
+#photo {
+    width:80vw;
+    height:80vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /*----------Navbar----------*/
 
 #navBar {
