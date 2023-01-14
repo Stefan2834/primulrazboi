@@ -287,7 +287,7 @@ span.an {
   background-image: url(images/batalii.jpg);
 }
 .fourth-slide {
-  background-color: blueviolet;
+  background-image: url(images/911640.jpg)
 }
 .text-intro{
   position: absolute;
@@ -495,9 +495,9 @@ span.an {
     box-shadow:0 0 4px black;
 }
 .main-transee-chart {
-    background-color: black;
     width:600px;
-    height:300px;
+    height:400px;
+    color:black;
 }
 
 /*----------Cauzele----------*/
