@@ -494,6 +494,11 @@ span.an {
 .main-transee-video {
     box-shadow:0 0 4px black;
 }
+.main-transee-chart {
+    background-color: black;
+    width:600px;
+    height:300px;
+}
 
 /*----------Cauzele----------*/
 
