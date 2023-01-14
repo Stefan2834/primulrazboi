@@ -156,30 +156,31 @@ nav {
     color:white;
     background-color: rgb(31,31,32);
     z-index:1;
+    padding:0 10px;
 }
 #white-cauzele {
-    width:160px;
     left:50px;
 }
 #white-inceputul {
-    width:200px;
     right:50px;
 }
 #white-aliantele {
     left:50px;
-    width:180px;
 }
 #white-transee {
     right:50px;
-    width:390px;
 }
 #white-batalii {
     left:50px;
-    width:360px;
 }
 #white-armament {
     right:50px;
-    width:250px;
+}
+#white-total {
+    left:50px;
+}
+#white-consecinte {
+    right:50px;
 }
 .white-line {
     position: absolute;
@@ -707,7 +708,7 @@ span.inceput-font {
     flex-direction: column;
     position: relative;
 }
-.inceput-left-bg, .inceput-right-bg, .transee-left-bg, .transee-right-bg {
+.inceput-left-bg, .inceput-right-bg, .total-left-bg, .total-right-bg, .transee-left-bg, .transee-right-bg {
     width:100%;
     height:25%;
     margin:5px 0;
@@ -761,12 +762,12 @@ span.inceput-font {
     margin:5px;
     text-align: center;
 }
-.inceput-left-bg:hover .inceput-left-name, .inceput-right-bg:hover .inceput-right-name{
+.inceput-left-bg:hover .inceput-left-name, .inceput-right-bg:hover .inceput-right-name, .total-left-bg:hover .inceput-left-name, .total-right-bg:hover .inceput-right-name{
     opacity: 1;
     translate: 0px 0px;
     transition-delay: 400ms;
 }
-.inceput-left-bg:hover, .inceput-right-bg:hover {
+.inceput-left-bg:hover, .inceput-right-bg:hover, .total-left-bg:hover, .total-right-bg:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
 .inceput-video {
@@ -1259,6 +1260,71 @@ span.transee-font {
     background-image: url(armament/flacari.png);
 }
 
+/*----------RazboiTotal----------*/
+
+#total {
+    width:100vw;
+    height:auto;
+    background-color: var(--principal);
+    padding:50px 0;
+    position: relative;
+}
+.total-left-bg, .total-right-bg {
+    height:33%;
+}
+.total-left-bg1 {
+    background-image:url(razboitotal/fabrica.png) ;
+}
+.total-left-bg2 {
+    background-image: url(razboitotal/ziar.png);
+}
+.total-left-bg3 {
+    background-image: url(razboitotal/coada4.jpg) ;
+}
+.total-right-bg1 {
+    background-image: url(razboitotal/razboi-mondial-epa2.jpg);
+}
+.total-right-bg2 {
+    background-image: url(razboitotal/ziar1.png);
+}
+.total-right-bg3 {
+    background-image: url(razboitotal/coada3.jpg);
+}
+
+/*----------Consecinte----------*/
+
+#consecinte {
+    width:100vw;
+    height:auto;
+    background-color: var(--principal);
+    padding:50px 0;
+    position: relative;
+}
+.consecinte-left-bg1 {
+    background-image: url(consecinte/europa-inainte.jpg);
+}
+.consecinte-left-bg2 {
+    background-image: url(consecinte/ziar1.jpg);
+}
+.consecinte-left-bg3 {
+    background-image: url(consecinte/franta.jpg);
+}
+.consecinte-left-bg4 {
+    background-image: url(consecinte/gassed.jpg);
+}
+.consecinte-right-bg1 {
+    background-image: url(consecinte/europa-dupa.jpg);
+}
+.consecinte-right-bg2 {
+    background-image: url(consecinte/pace.png);
+}
+.consecinte-right-bg3 {
+    background-image: url(consecinte/belgia.jpg);
+}
+.consecinte-right-bg4 {
+    background-image: url(consecinte/path.jpg);
+}
+
 
 /*----------Media queries----------*/
 
@@ -1320,6 +1386,15 @@ span.transee-font {
     }
     .nav-name:nth-child(5) {
         transition-delay: 700ms;
+    }
+    .nav-name:nth-child(6) {
+        transition-delay: 750ms;
+    }
+    .nav-name:nth-child(6) {
+        transition-delay: 800ms;
+    }
+    .nav-name:nth-child(6) {
+        transition-delay: 850ms;
     }
     .nav-name a {
         color:white;
