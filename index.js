@@ -376,7 +376,7 @@ var options = {
         if(val > 1000000) {
             return val / 1000000 + ' milioane';
         } else if(val > 100000) {
-            return val / 1000 + ' sute de mii';
+            return val / 1000 + ' de mii';
         }
       }
   },
