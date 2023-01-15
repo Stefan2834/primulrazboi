@@ -338,9 +338,11 @@ var photoExit = document.getElementById("photo-exit");
 var photo = document.getElementById("photo");
 var photoMenu = document.getElementById("photo-menu");
 var pozaSelect = document.querySelectorAll(".poza-select");
+var body = document.body
 
 photoExit.addEventListener("click", () => {
     photoMenu.style.display = 'none'
+    body.style.overflowY = 'scroll';
 })
 
 pozaSelect.forEach(pozaSelect => {
@@ -348,6 +350,7 @@ pozaSelect.forEach(pozaSelect => {
         let url = window.getComputedStyle(pozaSelect).backgroundImage
         photo.style.backgroundImage = url;
         photoMenu.style.display = 'flex'
+        body.style.overflowY = 'hidden';
     })
 })
 
