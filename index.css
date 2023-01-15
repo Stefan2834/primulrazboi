@@ -868,8 +868,8 @@ span.inceput-font {
     left:50%;
     translate:-50%;
     position: absolute;
-    width:300px;
-    font-size:15px;
+    width:350px;
+    font-size:14px;
     opacity:0;
     transition: 400ms ease;
 }
@@ -885,7 +885,7 @@ span.inceput-font {
     background-image: url(images/germania.jpg);
 }
 .second {
-    background-image: url(images/romania.webp);
+    background-image: url(images/romania.jpg);
 }
 .third {
     background-image: url(images/franta.jpg);
@@ -948,10 +948,31 @@ span.inceput-font {
     background-image: url(steag/germania.png);
 }
 .steag:nth-child(2) {
-    background-image: url(steag/austro-ungaria.png);
+    background-image: url(steag/austro-ungaria.jpg);
 }
 .steag:nth-child(3){
-    background-image: url(steag/italia.png);
+    background-image: url(steag/Bulgaria.png);
+}
+.steag:nth-child(4) {
+    background-image: url(steag/turcia.jpg);
+}
+.steag-ger-info, .steag-ro-info, .steag-fr-info {
+    position: absolute;
+    color:white;
+    padding:4px 5px;
+    background-color: var(--principal);
+    bottom:-50px;
+    left:50%;
+    transform: translate(-50%);
+    font-size: 16px;
+    font-family: 'Poppins';
+    text-align: center;
+    border-radius:3px;
+    opacity:0;
+    transition: 300ms ease;
+}
+.steag-ger:hover .steag-ger-info, .steag-ro:hover .steag-ro-info, .steag-fr:hover .steag-fr-info {
+    opacity:1;
 }
 .first:hover .steag-ger{
     transform: translateY(0px);
@@ -966,6 +987,9 @@ span.inceput-font {
 .first:hover .steag:nth-child(3) {
     transition-delay: 700ms;
 }
+.first:hover .steag:nth-child(4) {
+    transition-delay: 800ms;
+}
 
 #first-text:hover .slideLeft {
     top:calc(100% - 105px);
@@ -978,29 +1002,6 @@ span.inceput-font {
 }
 #first-text:hover .slideBottom {
     right:calc(100% - 105px);
-}
-#first-more, #second-more, #third-more {
-    width:150px;
-    height:35px;
-    left:50%;
-    translate:-50%;
-    position: absolute;
-    bottom:50px;
-    background:linear-gradient(90deg, rgba(53,53,59,1) 0%, rgba(10,11,19,1) 100%);
-    border-radius:100px;
-    color:white;
-    text-align: center;
-    font-size:20px;
-    line-height:35px;
-    opacity:0;
-    transition: 400ms ease;
-    font-family: 'Poppins',sans-serif;
-}
-.first:hover #first-more, .second:hover #second-more, .third:hover #third-more{
-    opacity:1;
-    translate: -50% -10px;
-    transition-delay: 1400ms;
-    cursor: pointer;
 }
 
 
@@ -1052,7 +1053,7 @@ span.inceput-font {
     background-image: url(steag/anglia.png);
 }
 .steag-fr:nth-child(3){
-    background-image: url(steag/rusia.png);
+    background-image: url(steag/rusia.jpg);
 }
 .third:hover .steag-fr{
     transform: translateY(0px);
