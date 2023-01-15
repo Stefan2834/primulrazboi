@@ -348,23 +348,27 @@ pozaSelect.forEach(pozaSelect => {
 
 var options = {
     series: [{
-    data: [850000, 700000, 500000, 500000, 400000]
+    data: [3000000, 2000000, 1500000, 1400000, 750000]
   }],
     chart: {
     width: '100%',
     type: 'bar',
   },
-  colors:['#f06529', '#2965f1', '#f7df1e', '#0769ad', '#fecd69'] ,
+  colors:['#d4241b', '#040404', '#d7dc0c', '#042394', '#828fd4'] ,
   plotOptions: {
     bar: {
-      columnWidth: '45%',
+      columnWidth: '70%',
       distributed: true,
     }
   },
   dataLabels: {
     enabled: true,
     formatter: function (val) {
-        return val;
+        if(val > 1000000) {
+            return val / 1000000 + ' milioane';
+        } else if(val > 100000) {
+            return val / 1000 + ' sute de mii';
+        }
       }
   },
   legend: {
@@ -372,11 +376,11 @@ var options = {
   },
   xaxis: {
     categories: [
+      ['Imperiul', 'Rus'],
       ['Germania'],
-      ['Anglia'],
-      ['Franta'],
       ['Austro-Ungria'],
-      ['Rusia'],
+      ['Franța'],
+      ['Anglia'],
     ],
     labels: {
       style: {
@@ -396,7 +400,11 @@ var options = {
     labels: {
       show: false,
       formatter: function (val) {
-        return val;
+        if(val > 1000000) {
+            return val / 1000000 + ' milioane';
+        } else if(val > 100000) {
+            return val / 1000 + ' de sute de mii';
+        }
       }
     }
   

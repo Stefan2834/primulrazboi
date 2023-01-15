@@ -623,7 +623,7 @@ span.an {
     background-image: url(cauze/otto-von.jpg);
 }
 .cauze-poza-left:nth-child(2) {
-    background-color: red;
+    background-image: url(cauze/imperii.jpg);
 }
 .cauze-poza-left:nth-child(3) {
     background-image: url(cauze/mitraliera.jpg);
@@ -786,7 +786,7 @@ span.inceput-font {
     background-image: url(inceputul/gavrilo-princip.jpg);
 }
 .inceput-bg7 {
-    background-color:red;
+    background-image: url(inceputul/soldatii.jpg);
 }
 .inceput-bg8 {
     background-image: url(inceputul/fotbal.jpg);
@@ -1189,7 +1189,7 @@ span.transee-font {
 }
 .batalii-third {
     background-image: url(batalii/ypres.jpg);
-    background-position: top;
+    background-position:center;
 }
 .batalii-absolute {
     position: absolute;
@@ -1289,7 +1289,7 @@ span.transee-font {
     background-image: url(armament/avion.jpg);
 }
 .armament-left-bg3 {
-    background-image:url(armament/zepelin.webp)
+    background-image:url(armament/zepelin.jpg)
 }
 .armament-left-bg4 {
     background-image: url(armament/gaz-cal.png)
