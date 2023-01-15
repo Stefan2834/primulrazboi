@@ -247,7 +247,7 @@ function thirdRevealMain () {
     }, 300)
     fourthTitle.style.opacity = '0';
 }
-
+var renderChart = 0;
 function fourthRevealMain () {
     actionIndicator.style.transform = "translateX(150px)";
     main.style.left = '-300vw';
@@ -261,6 +261,12 @@ function fourthRevealMain () {
         thirdTitle.style.zIndex = '5';
         fourthTitle.style.zIndex = '10';
     }, 300)
+    setTimeout(function () {
+        if(renderChart === 0) {
+            chart.render()
+            renderChart = 1;
+        }
+    }, 500)
 }
 firstRevealMain()
 
@@ -378,7 +384,7 @@ var options = {
     categories: [
       ['Imperiul', 'Rus'],
       ['Germania'],
-      ['Austro-Ungria'],
+      ['Austro-Ungaria'],
       ['Franța'],
       ['Anglia'],
     ],
@@ -411,6 +417,5 @@ var options = {
   },
 }
 var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
 
 
