@@ -1,30 +1,33 @@
-window.onscroll = function () {scroll()}
+window.addEventListener("scroll",function () {scroll()})
 window.onresize = function () {scroll()}
 
-function scroll() {    
+function scroll() { 
     var first = document.getElementById("first")
     var firstTop = first.getBoundingClientRect().top;
     var image = document.querySelectorAll(".image")
     var steagGer = document.querySelectorAll(".steag-ger");
     var germaniaNume = document.getElementById("germania-nume");
     var firstText = document.getElementById("first-text");
-    var firstMore = document.getElementById("first-more");
 
     var second = document.getElementById("second")
     var secondTop = second.getBoundingClientRect().top;
     var steagRo = document.querySelectorAll(".steag-ro");
     var romaniaNume = document.getElementById("romania-nume");
     var secondText = document.getElementById("second-text");
-    var secondMore = document.getElementById("second-more");
 
     var third = document.getElementById("third")
     var thirdTop = third.getBoundingClientRect().top;
     var steagFr = document.querySelectorAll(".steag-fr");
     var frantaNume = document.getElementById("franta-nume");
     var thirdText = document.getElementById("third-text");
-    var thirdMore = document.getElementById("third-more");
     var screenHeight = screen.height / 2;
+    let revealText1 = document.querySelector('.reveal-text1')
+    let revealText2 = document.querySelector('.reveal-text2')
+    let revealText3 = document.querySelector('.reveal-text3')
     if(outerWidth < 1000) {
+        revealText1.style.visibility = 'visible';
+        revealText2.style.visibility = 'visible';
+        revealText3.style.visibility = 'visible'
         if(firstTop <= screenHeight && secondTop > screenHeight) {
             image[0].style.opacity = '0.9';
             steagGer.forEach(steagGer => {
@@ -34,15 +37,13 @@ function scroll() {
             steagGer[0].style.transitionDelay = '500ms';
             steagGer[1].style.transitionDelay = '600ms';
             steagGer[2].style.transitionDelay = '700ms';
+            steagGer[3].style.transitionDelay = '800ms';
             germaniaNume.style.transform = 'translateY(0px)';
             germaniaNume.style.opacity = '1';
             germaniaNume.style.transitionDelay = '400ms';
             firstText.style.transform = 'translateY(-10px)';
             firstText.style.opacity = '1';
             firstText.style.transitionDelay = '800ms'
-            firstMore.style.transform = 'translateY(-10px)';
-            firstMore.style.opacity = '1';
-            firstMore.style.transitionDelay = '1200ms';
         } else if(secondTop <= screenHeight && thirdTop > screenHeight) {
             image[1].style.opacity = '0.9';
             steagRo.forEach(steagRo => {
@@ -58,9 +59,6 @@ function scroll() {
             secondText.style.transform = 'translateY(-10px)';
             secondText.style.opacity = '1';
             secondText.style.transitionDelay = '800ms'
-            secondMore.style.transform = 'translateY(-10px)';
-            secondMore.style.opacity = '1';
-            secondMore.style.transitionDelay = '1200ms';
         } else if(thirdTop < screenHeight) {
             image[2].style.opacity = '0.9';
             steagFr.forEach(steagFr => {
@@ -76,9 +74,6 @@ function scroll() {
             thirdText.style.transform = 'translateY(-10px)';
             thirdText.style.opacity = '1';
             thirdText.style.transitionDelay = '800ms'
-            thirdMore.style.transform = 'translateY(-10px)';
-            thirdMore.style.opacity = '1';
-            thirdMore.style.transitionDelay = '1200ms';
         } 
         if(firstTop > screenHeight || secondTop <= screenHeight) {
             image[0].style.opacity = '0.4';
@@ -93,9 +88,6 @@ function scroll() {
             firstText.style.transform = 'translateY(0px)';
             firstText.style.opacity = '0';
             firstText.style.transitionDelay = '0ms';
-            firstMore.style.transform = 'translateY(0px)';
-            firstMore.style.opacity = '0'
-            firstMore.style.transitionDelay = '0ms';
         } 
         if(secondTop > screenHeight || thirdTop <= screenHeight) {
             image[1].style.opacity = '0.4';
@@ -110,9 +102,6 @@ function scroll() {
             secondText.style.transform = 'translateY(0px)';
             secondText.style.opacity = '0';
             secondText.style.transitionDelay = '0ms';
-            secondMore.style.transform = 'translateY(0px)';
-            secondMore.style.opacity = '0'
-            secondMore.style.transitionDelay = '0ms';
         }
         if(thirdTop > screenHeight) {
             image[2].style.opacity = '0.4';
@@ -127,9 +116,6 @@ function scroll() {
             thirdText.style.transform = 'translateY(0px)';
             thirdText.style.opacity = '0';
             thirdText.style.transitionDelay = '0ms';
-            thirdMore.style.transform = 'translateY(0px)';
-            thirdMore.style.opacity = '0'
-            thirdMore.style.transitionDelay = '0ms';
         }
     }
 }

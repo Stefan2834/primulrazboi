@@ -156,33 +156,22 @@ function intro() {
   });
 } 
 window.addEventListener("resize", function() {
-  intro();
+  if(this.innerWidth > 1000) intro();
   widthTest();
   slide();
 });
 window.addEventListener('load', function () {
-  intro();
+  if(this.innerWidth > 1000 ) {
+    intro();
+  }
   widthTest();
 })
 
-function widthTest (e) {
-  if (outerWidth >= 1000) {
+function widthTest () {
+  if (innerWidth >= 1000) {
     first.addEventListener("mouseenter", () => firstReveal());
     second.addEventListener("mouseenter", () => secondReveal());
     third.addEventListener("mouseenter", () => thirdReveal());
-  } else if(outerWidth < 1000) {
-    window.addEventListener("scroll", function () {
-      let firstTop = first.getBoundingClientRect().top
-      let secondTop = second.getBoundingClientRect().top
-      let thirdTop = third.getBoundingClientRect().top
-      if (firstTop <= screenHeight && secondTop > screenHeight) {
-        firstReveal();
-      } else if(secondTop <= screenHeight && thirdTop > screenHeight) {
-        secondReveal();
-      } else if(thirdTop <= screenHeight) {
-        thirdReveal();
-      }
-    })
   }
 }
 function slide () {
