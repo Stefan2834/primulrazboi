@@ -16,13 +16,13 @@
         justify-content: flex-start;
     }
     #main-bg-slide {
-        height:1200px;
+        height:1300px;
     }
     #text-first-title {
-        height:1200px;
+        height:1300px;
     }
     #main-slide {
-        height:1200px;
+        height:1300px;
     }
     .first-slide, .second-slide, .third-slide, .fourth-slide {
         height:100%;
@@ -51,12 +51,15 @@
         left:50%;
         position: relative;
         transform: translate(-50%);
+        background-color: red;
+        margin-top:0;
     }
     .main-transee-text {
         width:100%;
     }
     .main-transee-flex-right {
         width:calc(100% - 20px);
+        margin-top:100px;
     }
     #navBar {
         width:100vw;
@@ -84,7 +87,7 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        height:300px;
+        min-height:500px;
         left:50%;
         top:50%;
         transform: translate(-50%,-50%);
