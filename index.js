@@ -1,5 +1,4 @@
 window.addEventListener("scroll",function () {scroll()})
-window.onresize = function () {scroll()}
 
 function scroll() { 
     var first = document.getElementById("first")

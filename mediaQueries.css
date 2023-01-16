@@ -207,6 +207,9 @@
         opacity:0;
         translate: -50% 0px;
     }
+    .batalii-verdun-left {
+        width:80vw;
+    }
 }
 @media screen and (max-width:900px) {
     #cauze-flex {

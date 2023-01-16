@@ -1166,12 +1166,13 @@ span.transee-font {
 
 #batalii {
     width:100vw;
-    height:600px;
+    min-height:700px;
     background-color: var(--principal);
+    overflow: hidden;
 }
 .batalii-slide {
     width:300vw;
-    height:600px;
+    height:700px;
     position: relative;
     display: flex;
     align-items: center;
@@ -1180,7 +1181,7 @@ span.transee-font {
 }
 .batalii-first, .batalii-second, .batalii-third {
     width:100vw;
-    height:600px;
+    height:700px;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.4);
@@ -1201,7 +1202,7 @@ span.transee-font {
 .batalii-absolute {
     position: absolute;
     width:100vw;
-    height:600px;
+    height:700px;
     z-index:10;
     left:0;
     background: linear-gradient(90deg,
@@ -1240,13 +1241,13 @@ span.transee-font {
 
 .batalii-verdun {
     width:100vw;
-    height:600px;
+    height:700px;
     position:absolute;
     z-index:10;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top:50px;
+    margin:50px 0;
 }
 .batalii-verdun-left {
     width:60vw;
