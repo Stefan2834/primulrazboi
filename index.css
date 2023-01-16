@@ -245,6 +245,7 @@ nav {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height:auto;
 }
 #title {
     width:400px;
@@ -305,7 +306,7 @@ span.an {
 }
 .first-slide, .second-slide, .third-slide, .fourth-slide {
     width:100vw;
-    height:100vh;
+    height:100vw;
     background-size: cover;
     background-position: center;
     background-color:rgba(0, 0, 0, 0.4);
@@ -337,7 +338,7 @@ span.an {
 }
 #text-first-title {
     width:100vw;
-    height:100vh;
+    height:100%;
     top:0;
     left:0;
     display: flex;
@@ -530,6 +531,8 @@ span.an {
 }
 .main-transee-video {
     box-shadow:0 0 4px black;
+    width:560px;
+    height:315px;
 }
 .main-transee-chart {
     width:600px;
@@ -1377,196 +1380,4 @@ span.transee-font {
 }
 .consecinte-right-bg4 {
     background-image: url(consecinte/path.jpg);
-}
-
-
-/*----------Media queries----------*/
-
-@media screen and (max-width:1000px) {
-    #navBar {
-        width:100vw;
-        height:70px;
-        background-color:black;
-        top:0;
-        left:0;
-        position:fixed;
-        z-index:300;
-    }
-    nav {
-        width:100vw;
-        height:100vh;
-        position:fixed;
-        background-color: rgba(0, 0, 0, 0.5);
-        top:0;
-        left:0;
-        z-index:100;
-        backdrop-filter: blur(3px);
-        top:-100vh;
-        transition: 400ms ease;
-    }
-    #flex-nav {
-        display:flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height:300px;
-        left:50%;
-        top:50%;
-        transform: translate(-50%,-50%);
-        position: absolute;
-    }
-    .nav-name {
-        height:30px;
-        font-size:18px;
-        cursor:pointer;
-        padding:5px;
-        top:0;
-        font-family: 'Noto Sans Georgian', sans-serif;
-        transition: 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
-        opacity: 0;
-        transform: translate(0, -20px);
-    }
-    .nav-name:nth-child(1) {
-        transition-delay: 500ms;
-    }
-    .nav-name:nth-child(2) {
-        transition-delay: 550ms;
-    }
-    .nav-name:nth-child(3) {
-        transition-delay: 600ms; 
-    }
-    .nav-name:nth-child(4) {
-        transition-delay: 650ms;
-    }
-    .nav-name:nth-child(5) {
-        transition-delay: 700ms;
-    }
-    .nav-name:nth-child(6) {
-        transition-delay: 750ms;
-    }
-    .nav-name:nth-child(6) {
-        transition-delay: 800ms;
-    }
-    .nav-name:nth-child(6) {
-        transition-delay: 850ms;
-    }
-    .nav-name a {
-        color:white;
-        text-decoration: none;
-        padding:5px;
-    }
-    .nav-name:hover {
-        transform: scale(1.2);
-    }
-    #menu {
-        width:40px;
-        height:40px;
-        color:white;
-        cursor: pointer;
-        position: relative;
-        top:15px;
-        left:20px;
-        background-size: 40px 40px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
-    }
-    #barTop, #barMiddle, #barBottom {
-        width:35px;
-        height:4px;
-        background-color: white;
-        border-radius: 4px;
-        transition:400ms ease;
-    }
-    #barTop {
-        transform-origin: left bottom;
-    }
-    #barBottom {
-        transform-origin: left top;
-    }
-    #main-left {
-        width:calc(100vw - 10px);
-    }
-    #main-right {
-        width:calc(100vw - 20px);
-    }
-
-    #flex{
-        flex-direction: column;
-        height:300vh;
-    }
-    .image{
-        width:100vw;
-        background-size:cover;
-    }
-    .first:hover, .second:hover, .third:hover {
-        flex-grow: 2;
-    }
-    #flex:hover .image {
-        width:100vw;
-        filter:blur(0);
-        background-blend-mode: normal;
-    }
-    #flex .image:hover {
-        opacity:0.4;
-    }
-    .first:hover .steag-ger, .second:hover .steag-ro, .third:hover .steag-fr {
-        transform: translateY(-10px);
-        opacity:0;
-    }
-    .first:hover #germania-nume, .second:hover #romania-nume, .third:hover #franta-nume{
-        opacity:0;
-        transform: translateY(-10px);
-    }
-    .first:hover #first-text, .second:hover #second-text, .third:hover #third-text {
-        translate:-50% 0px;
-        opacity:0;
-    }
-    .first:hover #first-more, .second:hover #second-more, .third:hover #third-more{
-        opacity:0;
-        translate: -50% 0px;
-    }
-}
-@media screen and (max-width:900px) {
-    #cauze-flex {
-        flex-direction: column;
-    }
-    #cauze-left, #cauze-right {
-        width:90vw;
-        overflow: visible;
-    }
-    #cauze-center {
-        width:90vw;
-        margin:30px 0;
-    }
-    .cauze-poza-left:nth-child(1) {
-        background-position-y: -80px;
-    }
-    .cauze-poza-left:nth-child(2) {
-        background-position-y: -100px;
-    }
-    .cauze-poza-right:nth-child(1) {
-        background-position-y: -50px;
-    }
-}
-
-@media screen and (max-width:600px) {
-    .video {
-        scale: 0.8;
-    }
-    .cauze-poza-left:nth-child(1) {
-        background-position-y: 0;
-    }
-    .cauze-poza-left:nth-child(2) {
-        background-position-y: -30px;
-    }
-    .cauze-poza-right:nth-child(1) {
-        background-position-y: 0px;
-    }
-}
-@media screen and (max-width:500px) {
-    .video {
-        scale:0.6;
-    }
 }
