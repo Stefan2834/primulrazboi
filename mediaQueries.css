@@ -51,7 +51,6 @@
         left:50%;
         position: relative;
         transform: translate(-50%);
-        background-color: red;
         margin-top:0;
     }
     .main-transee-text {
@@ -214,11 +213,14 @@
         flex-direction: column;
     }
     #cauze-left, #cauze-right {
-        width:90vw;
+        width:calc(100vw - 20px);
+        margin-left:10px;
         overflow: visible;
+        height:1200px;
     }
     #cauze-center {
-        width:90vw;
+        width:calc(100vw - 20px);
+        margin-left:10px;
         margin:30px 0;
     }
 }
