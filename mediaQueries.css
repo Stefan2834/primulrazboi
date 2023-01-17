@@ -212,16 +212,18 @@
     }
 }
 @media screen and (max-width:900px) {
-    #cauze-flex {
+    #cauze-flex, .inceputul-flex, .transee-flex {
         flex-direction: column;
     }
-    #cauze-left, #cauze-right {
+    #cauze-left, #cauze-right, .inceput-left, .inceput-right, .transee-left, .transee-right {
         width:calc(100vw - 20px);
-        margin-left:10px;
         overflow: visible;
         height:1200px;
     }
-    #cauze-center {
+    #cauze-left, #cauze-right {
+        margin-left:10px;
+    }
+    #cauze-center, .inceput-center, .transee-center {
         width:calc(100vw - 20px);
         margin-left:10px;
         margin:30px 0;
@@ -239,7 +241,7 @@
     #introducere-text {
         width:90%;
     }
-    .video, .main-transee-video {
+    .video, .main-transee-video, .inceput-video-frame {
         scale:0.7
     }
     .main-transee-chart {

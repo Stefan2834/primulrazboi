@@ -155,14 +155,21 @@ function intro() {
     });
   });
 } 
+var introText = document.querySelector(".reveal-intro");
 window.addEventListener("resize", function() {
-  if(this.innerWidth > 1000) intro();
+  if(window.innerWidth > 1000) {
+    intro()
+  } else {
+    introText.style.visibility = 'visible'
+  }
   widthTest();
   slide();
 });
 window.addEventListener('load', function () {
-  if(this.innerWidth > 1000 ) {
+  if(window.innerWidth > 1000 ) {
     intro();
+  } else {
+    introText.style.visibility = 'visible';
   }
   widthTest();
 })

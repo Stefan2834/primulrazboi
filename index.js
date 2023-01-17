@@ -172,6 +172,12 @@ if(window.innerWidth < 1000) {
     })
     window.onscroll = function () {menuClose()};
 }
+window.onresize = function () {
+    if(window.innerWidth > 1000) {
+        Menu = false;
+        menu() 
+    }
+}
 
 
 
