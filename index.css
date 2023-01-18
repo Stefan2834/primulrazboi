@@ -1415,7 +1415,7 @@ span.transee-font {
     text-decoration: none;
 }
 #quiz a:hover {
-    color:var(--nice);
+    color:aqua;
     text-decoration: underline;
 }
 .made-by {
@@ -1424,5 +1424,8 @@ span.transee-font {
     font-size: 24px;
 }
 .span-name {
+    color:rgb(40, 232, 249);
+}
+.span-name::selection {
     color:rgb(40, 232, 249);
 }
