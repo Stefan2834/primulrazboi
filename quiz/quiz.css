@@ -25,13 +25,13 @@ body {
 }
 .question {
     height:auto;
-    background:linear-gradient(90deg, rgba(129,29,192, 0.8) 0%, rgba(237, 20, 140, 0.8) 100%);
+    background-color:rgb(18, 18, 24);
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
     padding:20px 0;
-    box-shadow: 0 0 6px inset rgba(0, 0, 0, 0.6)
+    /* box-shadow: 0 0 6px inset rgba(0, 0, 0, 0.6) */
 }
 .title {
     font-size:20px;
@@ -91,7 +91,7 @@ input:checked ~ .input-bg{
 .score {
     width:100vw;
     height:100vh;
-    background:linear-gradient(90deg, rgba(129,29,192, 0.8) 0%, rgba(237, 20, 140, 0.8) 100%);
+    background-color: rgb(18, 18, 24);;
     display: flex;
     align-items: center;
     justify-content: center;

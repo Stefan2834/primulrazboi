@@ -14,7 +14,7 @@ submit.addEventListener("submit", function (e) {
             value.checked = false;
         }
     })
-    document.body.innerHTML = `<div class="score"><div>Scorul tau: ${score}<div><a href='/'>Inapoi</a></div>`
+    document.body.innerHTML = `<div class="score"><div>Punctajul tău: ${score}<div><a href='/'>Inapoi</a></div>`
     score = 0;
 })
 
