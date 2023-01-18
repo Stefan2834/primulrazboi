@@ -109,3 +109,10 @@ input:checked ~ .input-bg{
     text-decoration: underline;
     color:white;
 }
+@media screen and (max-width:720px) {
+    .form {
+        width:100vw;
+        align-items: center;
+        justify-content: center;
+    }
+}
