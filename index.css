@@ -1390,3 +1390,39 @@ span.transee-font {
 .consecinte-right-bg4 {
     background-image: url(consecinte/path.jpg);
 }
+
+/*----------Footer----------*/
+
+#footer {
+    width:100vw;
+    height:150px;
+    background-color: rgb(18, 18, 18);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.628)
+}
+#quiz {
+    font-family: 'Noto sans serif', sans-serif;
+    font-size:20px;
+    text-align: center;
+    color:white;
+}
+#quiz a {
+    color:white;
+    transition:400ms ease;
+    text-decoration: none;
+}
+#quiz a:hover {
+    color:var(--nice);
+    text-decoration: underline;
+}
+.made-by {
+    color:white;
+    font-family: 'Poppins',sans-serif;
+    font-size: 24px;
+}
+.span-name {
+    color:rgb(40, 232, 249);
+}
