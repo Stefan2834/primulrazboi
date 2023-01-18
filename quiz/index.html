@@ -7,6 +7,7 @@
   <title>Primul Război Mondial</title>
   <link rel="icon" type="image/x-icon" href="../images/favicon.png">
   <link href="quiz.css" rel="stylesheet">
+  <script src="quiz.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js" integrity="sha512-K5BohS7O5E+S/W8Vjx4TIfTZfxe9qFoRXlOXEAWJD7MmOXhvsSl2hJihqc0O8tlIfcjrIkQXiBjixV8jgon9Uw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/6.0.3/esm/ionicons.min.js" integrity="sha512-qFRjtFs1SsmZHbyvBqGiM8idmNed7AmDUkHHhRSR6JD1sSmv7HsQtdVeQ2jVuTCzcstSIcd+l/2DlGEl58dMRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -16,91 +17,96 @@
     <div class="question">
         <div class="title">Una dintre cauzele Primului Război Mondial a fost:</div>
         <form class="form">
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Războiul dintre Imperiul Rus și Franța</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Rivalitatea dintre Germania, pe de o parte și Franța și Anglia, pe de altă parte</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Unificarea Franței</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Asasinarea prințului moștenitor al imperiului Austro-Ungar</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Războiul dintre Imperiul Rus și Franța</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="true"><div class="input-bg">Rivalitatea dintre Germania, pe de o parte și Franța și Anglia, pe de altă parte</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Unificarea Franței</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Asasinarea prințului moștenitor al imperiului Austro-Ungar</div></label>
         </form>
     </div>
     <div class="question">
         <div class="title">Pretextul războiului a fost reprezentat de:</div>
         <form class="form">
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Lupta pentru colonii și piețe de desfacere</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Criza marocană</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Asasinarea prințului moștenitor al imperiului Austro-Ungar</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Încoronarea lui Wilhelm al II-lea ca împărat al Germaniei</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="true"><div class="input-bg">Lupta pentru colonii și piețe de desfacere</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Criza marocană</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Asasinarea prințului moștenitor al imperiului Austro-Ungar</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Încoronarea lui Wilhelm al II-lea ca împărat al Germaniei</div></label>
         </form>
     </div>
     <div class="question">
         <div class="title">Cele două alianțe politico-militare implicate în război au fost:</div>
         <form class="form">
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Antanta și Aliații</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Axa și Puterile Centrale</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Axa și Aliații</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Antanta și Puterile Centrale</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Antanta și Aliații</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Axa și Puterile Centrale</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Axa și Aliații</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="true"><div class="input-bg">Antanta și Puterile Centrale</div></label>
         </form>
     </div>
     <div class="question">
         <div class="title">Războiul se transformă într-unul mondial prin:</div>
         <form class="form">
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Implicarea coloniilor și a SUA</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Desfășurarea bătăliilor navale</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Intrarea SUA alături de Puterile Centrale</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Desfășurarea de operațiuni militare pe teritoriul chinez</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="true"><div class="input-bg">Implicarea coloniilor și a SUA</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Desfășurarea bătăliilor navale</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Intrarea SUA alături de Puterile Centrale</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Desfășurarea de operațiuni militare pe teritoriul chinez</div></label>
         </form>
     </div>
     <div class="question">
         <div class="title">Cele două fronturi principale au fost:</div>
         <form class="form">
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Frontul de vest și frontul din Balcani</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Frontul de vest și Frontul de est</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Frontul din Balcani și frontul italian</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Frontul de est și Frontul din Balcani</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Frontul de vest și frontul din Balcani</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="true"><div class="input-bg">Frontul de vest și Frontul de est</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Frontul din Balcani și frontul italian</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Frontul de est și Frontul din Balcani</div></label>
         </form>
     </div>
     <div class="question">
         <div class="title">Nereușind să obțină o victorie hotorâtoare niciuna dintre tabere, până în 1915 războiul se transformă într-unul:</div>
         <form class="form">
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Ofensiv</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Naval</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">De tranșee</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Mondial</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Ofensiv</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Naval</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="true"><div class="input-bg">De tranșee</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Mondial</div></label>
         </form>
     </div>
     <div class="question">
         <div class="title">Din punct de vedere al armatei franceze, cea mai sângeroasă bătălie a fost cea de la:</div>
         <form class="form">
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Marna</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Ypres</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Cambrai</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Verdun</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Marna</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Ypres</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Cambrai</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="true"><div class="input-bg">Verdun</div></label>
         </form>
     </div>
     <div class="question">
         <div class="title">Pentru a mobiliza populația în sprijinul războiului, este folosită intens:</div>
         <form class="form">
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Propaganda de război</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Înrolarea forțată</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Raționalizarea alimentelor</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Munca voluntară</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="true"><div class="input-bg">Propaganda de război</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Înrolarea forțată</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Raționalizarea alimentelor</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Munca voluntară</div></label>
         </form>
     </div>
     <div class="question">
         <div class="title">Foametea din timpul războiului a afectat cel mai mult populația din:</div>
         <form class="form">
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Franța</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Marea Britanie</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Germania</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Austro-Ungaria</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Franța</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Marea Britanie</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="true"><div class="input-bg">Germania</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Austro-Ungaria</div></label>
         </form>
     </div>
     <div class="question">
         <div class="title">Prima țară care semnează o pace separată și iese din război a fost:</div>
         <form class="form">
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Austro-Ungaria</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Rusia</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Imperiul Otoman</div></label>
-            <label class="label"><input type="radio" name="q1"><div class="input-bg">Bulgaria</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Austro-Ungaria</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="true"><div class="input-bg">Rusia</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Imperiul Otoman</div></label>
+            <label class="label"><input class='value' type="radio" name="q1" value="false"><div class="input-bg">Bulgaria</div></label>
+        </form>
+    </div>
+    <div class="question">
+        <form id="submit">
+            <input type="submit" id="submit" value="Vezi punctajul">
         </form>
     </div>
 </body>
