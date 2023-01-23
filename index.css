@@ -165,6 +165,11 @@ nav {
     border-right:5px solid white;
     border-bottom-right-radius:  10px;
 }
+span.text-name {
+    font-family: 'Poppins', sans-serif;
+    font-size:16px;
+    font-weight: 500;
+}
 
 
 
@@ -963,13 +968,13 @@ span.inceput-font {
     background-image: url(steag/germania.png);
 }
 .steag:nth-child(2) {
-    background-image: url(steag/austro-ungaria.jpg);
+    background-image: url(steag/austro-ungaria.png);
 }
 .steag:nth-child(3){
     background-image: url(steag/Bulgaria.png);
 }
 .steag:nth-child(4) {
-    background-image: url(steag/turcia.jpg);
+    background-image: url(steag/turcia.png);
 }
 .steag-ger-info, .steag-ro-info, .steag-fr-info {
     position: absolute;
@@ -985,9 +990,11 @@ span.inceput-font {
     border-radius:3px;
     opacity:0;
     transition: 300ms ease;
+    visibility: hidden;
 }
 .steag-ger:hover .steag-ger-info, .steag-ro:hover .steag-ro-info, .steag-fr:hover .steag-fr-info {
     opacity:1;
+    visibility: visible;
 }
 .first:hover .steag-ger{
     transform: translateY(0px);
@@ -1028,7 +1035,7 @@ span.inceput-font {
     background-image: url(steag/spania.png);
 }
 .steag-ro:nth-child(2) {
-    background-image: url(steag/romania.png);
+    background-image: url(steag/norvegia.png);
 }
 .steag-ro:nth-child(3){
     background-image: url(steag/danemarca.png);
@@ -1403,18 +1410,18 @@ span.transee-font {
     justify-content: space-evenly;
     box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.628)
 }
-#quiz {
+#quiz, .surse {
     font-family: 'Noto sans serif', sans-serif;
     font-size:20px;
     text-align: center;
     color:white;
 }
-#quiz a {
+#quiz a, .surse a {
     color:white;
     transition:400ms ease;
     text-decoration: none;
 }
-#quiz a:hover {
+#quiz a:hover, .surse a:hover {
     color:aqua;
     text-decoration: underline;
 }
@@ -1428,4 +1435,7 @@ span.transee-font {
 }
 .span-name::selection {
     color:rgb(40, 232, 249);
+}
+.surse {
+    font-size:26px;
 }
