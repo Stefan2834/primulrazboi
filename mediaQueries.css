@@ -228,6 +228,10 @@
         margin-left:10px;
         margin:30px 0;
     }
+    #footer {
+        flex-direction: column;
+        height: 250px;
+    }
 }
 @media screen and (max-width:750px) {
     #introducere-text {
@@ -235,10 +239,6 @@
     }
     .main-transee-chart {
         scale:0.8;
-    }
-    #footer {
-        flex-direction: column;
-        height: 200px;
     }
 }
 @media screen and (max-width:600px) {
