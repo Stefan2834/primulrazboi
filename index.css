@@ -41,7 +41,7 @@ body {
     background-color: rgb(12, 13, 14);
     transition:800ms ease;
     overflow: hidden;
-    z-index:200;
+    z-index:300;
     position: fixed;
     top:0;
     display: flex;
@@ -618,6 +618,7 @@ span.an {
     background-color: var(--principal);
     position: relative;
     padding:50px 0;
+    overflow: hidden;
 }
 #cauze-flex {
     display: flex;
@@ -784,6 +785,7 @@ span.an {
     background-color: var(--principal);
     padding:50px 0 200px 0;
     position: relative;
+    overflow: hidden;
 }
 .inceputul-flex {
     width:calc(100vw - 40px);
@@ -1170,6 +1172,7 @@ span.inceput-font {
     background-color: var(--principal);
     padding:50px 0;
     position: relative;
+    overflow: hidden;
 }
 .transee-flex {
     display: flex;
@@ -1362,6 +1365,7 @@ span.transee-font {
     background-color: var(--principal);
     padding:50px 0;
     position: relative;
+    overflow: hidden;
 }
 .armament-left-bg1 {
     background-image: url(armament/tank.jpg);
@@ -1397,6 +1401,7 @@ span.transee-font {
     background-color: var(--principal);
     padding:50px 0;
     position: relative;
+    overflow: hidden;
 }
 .total-left-bg, .total-right-bg {
     height:33%;
@@ -1428,6 +1433,7 @@ span.transee-font {
     background-color: var(--principal);
     padding:50px 0;
     position: relative;
+    overflow: hidden;
 }
 .consecinte-left-bg1 {
     background-image: url(consecinte/europa-inainte.jpg);
