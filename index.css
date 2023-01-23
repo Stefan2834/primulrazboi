@@ -9,7 +9,7 @@ html {
 }
 body {
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
     background-color: black;
 }
 :root {
@@ -22,7 +22,63 @@ body {
     color:white;
     text-shadow:0px 0px 0px transparent;
 }
-
+.loading-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height:200px;
+    flex-direction: column;
+    transform: translateY(-10%);
+}
+.loading-text {
+    font-family: 'Secular One', sans-serif;
+    font-size:30px;
+    color:white;
+}
+#loading {
+    width:100vw;
+    height:100vh;
+    background-color: rgb(12, 13, 14);
+    transition:800ms ease;
+    overflow: hidden;
+    z-index:200;
+    position: fixed;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading-circle {
+    display: inline-block;
+    position: relative;
+    width:80px;
+    height:80px;
+}
+.loading-circle div {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width:64px;
+    height:64px;
+    margin:8px;
+    border:8px solid aqua;
+    border-radius: 50%;
+    animation: loading 3s cubic-bezier(0.5,0,0.5,10) infinite;
+    border-color:aqua transparent transparent transparent;
+}
+.loading-circle .load1 {
+    transition-delay: 450ms;
+}
+.loading-circle .load2 {
+    transition-delay: 300ms;
+}
+.loading-circle .load3 {
+    transition-delay: 150ms;
+}
+@keyframes loading {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
 #photo-menu {
     width:100vw;
     height:100vh;
@@ -47,7 +103,7 @@ body {
     font-weight: 600;
     right:20px;
     align-self: flex-start;
-    z-index:200;
+    z-index:150;
     top:100px;
 }
 #photo {
@@ -66,7 +122,7 @@ body {
     top:0;
     left:0;
     position:fixed;
-    z-index:100;
+    z-index:99;
 }
 nav {
     width:100vw;
@@ -75,7 +131,7 @@ nav {
     background-color:100px;
     top:0;
     left:0;
-    z-index:200;
+    z-index:99;
     transition: 400ms ease;
     display: flex;
     align-items: center;
@@ -1421,7 +1477,7 @@ span.transee-font {
     transition:400ms ease;
     text-decoration: none;
 }
-#quiz a:hover, .surse a:hover {
+#quiz a:hover {
     color:aqua;
     text-decoration: underline;
 }
@@ -1439,4 +1495,15 @@ span.transee-font {
 .surse {
     font-size:26px;
     padding:0 30px;
+    transition: 400ms ease;
+}
+.surse a:hover {
+    color: aqua;
+}
+.surse a:hover .fa-solid {
+    transform: rotate(360deg);
+    color:white;
+}
+.fa-cloud-arrow-down {
+    transition: 400ms ease;
 }

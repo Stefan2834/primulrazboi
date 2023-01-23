@@ -247,3 +247,11 @@ function slide () {
 }
 
 setTimeout(slide(),1000);
+
+
+var load = document.getElementById("loading");
+window.addEventListener("load", function () {
+    load.style.opacity = '0';
+    load.style.visibility = 'hidden';
+    body.style.overflowY = 'scroll';
+})
