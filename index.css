@@ -35,6 +35,18 @@ body {
     font-size:30px;
     color:white;
 }
+#svgGroup {
+    position: absolute;
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+}
+#svg {
+    width:500px;
+    position: absolute;
+    top:-50px;
+    left:50%;
+    transform: translate(-50%);
+}
 #loading {
     width:100vw;
     height:100vh;
@@ -48,37 +60,16 @@ body {
     align-items: center;
     justify-content: center;
 }
-.loading-circle {
-    display: inline-block;
-    position: relative;
-    width:80px;
-    height:80px;
+.custom-loader {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:conic-gradient(#0000 10%,aqua);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 16px),#000 0);
+    animation:s3 1s infinite linear;
 }
-.loading-circle div {
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    width:64px;
-    height:64px;
-    margin:8px;
-    border:8px solid aqua;
-    border-radius: 50%;
-    animation: loading 3s cubic-bezier(0.5,0,0.5,10) infinite;
-    border-color:aqua transparent transparent transparent;
-}
-.loading-circle .load1 {
-    transition-delay: 450ms;
-}
-.loading-circle .load2 {
-    transition-delay: 300ms;
-}
-.loading-circle .load3 {
-    transition-delay: 150ms;
-}
-@keyframes loading {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(360deg)}
-}
+
+@keyframes s3 {to{transform: rotate(1turn)}}
 #photo-menu {
     width:100vw;
     height:100vh;

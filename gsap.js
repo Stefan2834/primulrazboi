@@ -246,12 +246,26 @@ function slide () {
   }
 }
 
-setTimeout(slide(),1000);
+setTimeout(slide(),2000);
 
 
 var load = document.getElementById("loading");
 window.addEventListener("load", function () {
-    load.style.opacity = '0';
-    load.style.visibility = 'hidden';
-    body.style.overflowY = 'scroll';
+    setTimeout(function() {
+      load.style.opacity = '0';
+      load.style.visibility = 'hidden';
+      body.style.overflowY = 'scroll';
+    }, 2000)
+    anime({
+      targets: '#svgGroup',
+      strokeDashoffset: [1000, 0],
+      easing: 'easeInOutSine',
+      duration: 5000,
+      delay: function(el, i) { return i * 250 },
+      direction: 'alternate',
+      loop: false,
+  },)
 })
+
+
+
