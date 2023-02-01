@@ -251,11 +251,11 @@ setTimeout(slide(),2000);
 
 var load = document.getElementById("loading");
 window.addEventListener("load", function () {
-    // setTimeout(function() {
-    //   load.style.opacity = '0';
-    //   load.style.visibility = 'hidden';
-    //   body.style.overflowY = 'scroll';
-    // }, 2000)
+    setTimeout(function() {
+      load.style.opacity = '0';
+      load.style.visibility = 'hidden';
+      body.style.overflowY = 'scroll';
+    }, 2000)
     anime({
       targets: '#svgGroup',
       strokeDashoffset: [1000, 0],
