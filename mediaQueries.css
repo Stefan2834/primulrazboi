@@ -251,4 +251,7 @@
     .main-transee-chart {
         scale:0.6
     }
+    #svg {
+        width:400px;
+    }
 }
